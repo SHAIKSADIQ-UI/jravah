@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+     <title>JRavah Foods | Authentic Andhra Pickles & Snacks</title>
+    <link rel="icon" type="image/png" href="images/logo4.JPG" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-ZRr3GqQ5GNsMNFc13JUO2c+hJ1ytY1/6VXOvNh+lX6YsJhBKt3vnDnN/SUXOc6Bx/6CkXbkqVKgf/mBlC9FZpA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+    <link rel="stylesheet" href="css/premium-style.css" />
+  </head>
+  <body data-page="contact">
+    <header class="site-navbar">
+      <div class="navbar-inner">
+        <button class="hamburger" data-action="open-menu" aria-label="Open navigation">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <a href="index.html" class="logo-link">
+          <img src="images/JRavahlogo.png" alt="JRavah Foods Logo" />
+        </a>
+        <nav>
+          <ul class="nav-links">
+            <li><a class="nav-link" href="index.html" data-page-link="home">Home</a></li>
+            <li><a class="nav-link" href="shopus3.html" data-page-link="shop">Shop All</a></li>
+            <li><a class="nav-link" href="Pickels.html" data-page-link="pickles">Pickles</a></li>
+            <li><a class="nav-link" href="Sweets.html" data-page-link="sweets">Sweets</a></li>
+            <li><a class="nav-link" href="Spices.html" data-page-link="spices">Spices</a></li>
+            <li><a class="nav-link" href="Snacks.html" data-page-link="snacks">Snacks</a></li>
+            <li><a class="nav-link" href="about.html" data-page-link="about">About Us</a></li>
+            <li><a class="nav-link" href="contact.html" data-page-link="contact">Contact</a></li>
+          </ul>
+        </nav>
+        <a href="viewcart.html" class="cart-button" aria-label="View cart">
+          <i class="fa-solid fa-cart-shopping"></i>
+          <span class="cart-badge">0</span>
+        </a>
+      </div>
+    </header>
+
+    <div class="mobile-menu" data-component="mobile-menu">
+      <button class="close-menu" data-action="close-menu" aria-label="Close menu">&times;</button>
+      <ul>
+        <li><a class="nav-link" href="index.html" data-page-link="home">Home</a></li>
+        <li><a class="nav-link" href="shopus3.html" data-page-link="shop">Shop All</a></li>
+        <li><a class="nav-link" href="Pickels.html" data-page-link="pickles">Pickles</a></li>
+        <li><a class="nav-link" href="Sweets.html" data-page-link="sweets">Sweets</a></li>
+        <li><a class="nav-link" href="Spices.html" data-page-link="spices">Spices</a></li>
+        <li><a class="nav-link" href="Snacks.html" data-page-link="snacks">Snacks</a></li>
+        <li><a class="nav-link" href="about.html" data-page-link="about">About Us</a></li>
+        <li><a class="nav-link" href="contact.html" data-page-link="contact">Contact</a></li>
+      </ul>
+    </div>
+
+    <section class="category-hero">
+      <div class="section-wrapper" data-aos="fade-up">
+        <p>We’d love to hear from you</p>
+        <h1>Say Hello to JRavah Foods</h1>
+        <p>Have a bulk order, franchise query, or want to share feedback on our pickles? Drop us a note.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-wrapper about-grid">
+        <div data-aos="fade-right">
+          <div class="form-card">
+            <h3>Send us a Message</h3>
+            <!-- <form id="contactForm">
+              <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" required />
+              </div>
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" required />
+              </div>
+              <div class="form-group">
+                <label for="phone">Phone</label>
+                <input type="tel" id="phone" pattern="[0-9]{10}" required />
+              </div>
+              <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" rows="4" required></textarea>
+              </div>
+              <button class="btn-pill btn-primary-pill" type="submit">Send Message</button>
+              <p id="formStatus" style="margin-top: 1rem;"></p>
+            </form> -->
+            <!-- WhatsApp redirect on submit
+Below is a small, drop‑in JavaScript snippet you can add to your page that keeps your existing design and animations and, when the user clicks Send Message, builds a formatted message from the form fields and opens WhatsApp chat with your number +918522084422. It validates the form, shows a short status message, and opens WhatsApp using a properly encoded URL. -->
+
+<!-- Keep your existing form markup exactly as-is -->
+<form id="contactForm">
+  <div class="form-group">
+    <label for="name">Name</label>
+    <input type="text" id="name" required />
+  </div>
+  <div class="form-group">
+    <label for="email">Email</label>
+    <input type="email" id="email" required />
+  </div>
+  <div class="form-group">
+    <label for="phone">Phone</label>
+    <input type="tel" id="phone" pattern="[0-9]{10}" required />
+  </div>
+  <div class="form-group">
+    <label for="message">Message</label>
+    <textarea id="message" rows="4" required></textarea>
+  </div>
+  <button class="btn-pill btn-primary-pill" type="submit">Send Message</button>
+  <p id="formStatus" style="margin-top: 1rem;"></p>
+</form>
+
+<script>
+/*
+  WhatsApp redirect script
+  - Replace whatsappNumber with your number in international format WITHOUT the plus sign or spaces.
+  - Example for +918522084422 -> "918522084422"
+*/
+(function () {
+  const form = document.getElementById('contactForm');
+  const statusEl = document.getElementById('formStatus');
+
+  // Your WhatsApp number in international format without + or spaces
+  const whatsappNumber = '918522084422';
+
+  function buildWhatsAppMessage(values) {
+    // Build a friendly, readable message. Adjust labels as needed.
+    return [
+      'New contact form submission:',
+      `Name: ${values.name}`,
+      `Email: ${values.email}`,
+      `Phone: ${values.phone}`,
+      `Message: ${values.message}`
+    ].join('\n');
+  }
+
+  function openWhatsApp(number, text) {
+    const encoded = encodeURIComponent(text);
+    // wa.me is the short link format; api.whatsapp.com works too.
+    const url = `https://wa.me/${number}?text=${encoded}`;
+
+    // Try to open in a new tab/window. If popup blocked, fallback to same tab.
+    const win = window.open(url, '_blank');
+    if (!win) {
+      // Popup blocked — navigate current window
+      window.location.href = url;
+    }
+  }
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    // Simple HTML5 validation check
+    if (!form.checkValidity()) {
+      // Let browser show validation UI; also show a short status
+      statusEl.textContent = 'Please fill out all required fields correctly.';
+      statusEl.style.color = 'crimson';
+      return;
+    }
+
+    // Collect values
+    const values = {
+      name: document.getElementById('name').value.trim(),
+      email: document.getElementById('email').value.trim(),
+      phone: document.getElementById('phone').value.trim(),
+      message: document.getElementById('message').value.trim()
+    };
+
+    // Optional: additional validation for phone length
+    if (!/^\d{10}$/.test(values.phone)) {
+      statusEl.textContent = 'Please enter a valid 10-digit phone number.';
+      statusEl.style.color = 'crimson';
+      return;
+    }
+
+    // Build message and open WhatsApp
+    const waMessage = buildWhatsAppMessage(values);
+
+    // UX: show temporary status
+    statusEl.textContent = 'Opening WhatsApp…';
+    statusEl.style.color = '#333';
+
+    // Small delay to allow status to render before opening WhatsApp
+    setTimeout(() => {
+      openWhatsApp(whatsappNumber, waMessage);
+
+      // After redirect attempt, update status (this may not be seen if user leaves)
+      statusEl.textContent = 'If WhatsApp did not open, please ensure it is installed or try again.';
+      statusEl.style.color = '#333';
+
+      // Optionally reset the form (uncomment if desired)
+      // form.reset();
+    }, 150);
+  });
+})();
+</script>
+
+<!-- 
+
+Notes and tips
+- Number format: WhatsApp requires the number in international format without + or spaces (for India: 918522084422).
+- Mobile vs desktop: On mobile the WhatsApp app will open if installed; on desktop it opens WhatsApp Web.
+- Privacy: The message is sent by the user from their WhatsApp client — you will receive it in your WhatsApp account.
+- No design changes: This script only adds behavior; it does not change your existing CSS or animations.
+- Popup blockers: If a popup is blocked, the script falls back to navigating the current tab to the WhatsApp URL.
+If you want the message to include additional fields, a different format, or to open WhatsApp in a modal-like confirmation step before redirecting, tell me which change and I’ll update the snippet. -->
+
+          </div>
+        </div>
+        <div data-aos="fade-left">
+          <div class="contact-info-grid">
+            <article class="contact-card">
+              <div class="icon"><i class="fa-solid fa-phone"></i></div>
+              <h3>Phone &amp; WhatsApp</h3>
+              <p>+918522084422</p>
+            </article>
+            <article class="contact-card">
+              <div class="icon"><i class="fa-solid fa-envelope"></i></div>
+              <h3>Email</h3>
+              <p>info@jravahfoods.com</p>
+            </article>
+            <article class="contact-card">
+              <div class="icon"><i class="fa-solid fa-location-dot"></i></div>
+              <h3>Location</h3>
+              <p>Vijayawada 520015, Andhra Pradesh, INDIA
+            </article>
+          </div>
+          <div class="mt-4" data-aos="zoom-in">
+            <iframe 
+  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.7747811543027!2d80.64608657513404!3d16.56005428422765!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a35e5fb6fc0fc15%3A0xd9a9491526c4dcc1!2sJravah%20foods!5e0!3m2!1sen!2sin!4v1734012345678!5m2!1sen!2sin"
+  width="100%"
+  height="500"
+  style="border:0; border-radius:16px; box-shadow:var(--shadow-light);"
+  allowfullscreen=""
+  loading="lazy"
+  referrerpolicy="no-referrer-when-downgrade">
+</iframe>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="light-bg">
+      <div class="section-wrapper">
+        <h2 class="section-title" data-aos="fade-up">Business &amp; Partnership Enquiries</h2>
+        <div class="contact-info-grid">
+          <article class="contact-card" data-aos="fade-up">
+            <div class="icon"><i class="fa-solid fa-store"></i></div>
+            <h3>Retail &amp; Distribution</h3>
+            <p>Stock JRavah products in your store or marketplace. Ideal for Indian grocers, gourmet retailers, and online platforms.</p>
+          </article>
+          <article class="contact-card" data-aos="fade-up">
+            <div class="icon"><i class="fa-solid fa-boxes-packing"></i></div>
+            <h3>Bulk &amp; Corporate Gifting</h3>
+            <p>Custom hampers and bulk packs for festivals, weddings, and corporate gifting—curated to your budget and audience.</p>
+          </article>
+          <article class="contact-card" data-aos="fade-up">
+            <div class="icon"><i class="fa-solid fa-clock"></i></div>
+            <h3>Support Hours</h3>
+            <p>We’re reachable on WhatsApp and phone from 9:30 AM – 7:00 PM IST, Monday to Saturday.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <div class="footer-content">
+        <div>
+          <img src="images/JRavahlogo.png" alt="JRavah Foods" class="footer-logo" />
+          <p>High-quality, freshly ground spices and authentic Indian snacks, straight from our farm to your table.</p>
+        </div>
+        <div>
+          <h4 class="footer-heading">Quick Links</h4>
+          <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="shopus3.html">Shop Us</a>
+            <a href="about.html">About Us</a>
+            <a href="contact.html">Contact</a>
+          </div>
+        </div>
+        <div>
+          <h4 class="footer-heading">Policies</h4>
+          <div class="footer-links">
+            <a href="Privacypolicy.html">Privacy Policy</a>
+            <a href="Shipping policy.html">Shipping Policy</a>
+            <a href="Returns.html">Returns &amp; Refunds</a>
+          </div>
+          <div class="d-flex align-items-center">
+  <img src="images/f.png" class="me-2" 
+       alt="FSSAI Logo" 
+       style="width: 45px; height: auto; margin-right: 6px;">
+  <span>Lic. No: <strong>1012502000047</strong></span>
+</div>
+        </div>
+        <div>
+          <h4 class="footer-heading">Contact Us</h4>
+          <div class="footer-links">
+            <!-- <a href="https://maps.app.goo.gl/" target="_blank" rel="noopener">
+              <i class="fa-solid fa-location-dot"></i> Vijayawada, AP 520015
+            </a> -->
+            <a href="https://www.google.com/maps/search/?api=1&query=Jravah+Foods+Vijayawada+Andhra+Pradesh+520015"
+   target="_blank"
+   rel="noopener">
+  <i class="fa-solid fa-location-dot"></i> Vijayawada, AP 520015
+</a>
+
+            <a href="tel:+918522084422"><i class="fa-solid fa-phone"></i> +918522084422</a>
+            <a href="mailto:info@jravahfoods.com"><i class="fa-solid fa-envelope"></i> info@jravahfoods.com</a>
+          </div>
+          <div class="footer-social">
+            <a href="https://www.instagram.com/jravahfoods/" class="social-link" aria-label="JRavah on Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.facebook.com/people/JRavahfoods/61576078651543/" class="social-link" aria-label="JRavah on Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://www.youtube.com/@jrfarmsagri8903" class="social-link" aria-label="JRavah on YouTube"><i class="fa-brands fa-youtube"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>Designed by <a href="https://technologies.synnectify.com" target="_blank" rel="noopener">Synnectify Technologies</a></p>
+        <p>© 2025 JRavah Foods. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <nav class="mobile-bottom-nav">
+      <div class="nav-items">
+        <a href="index.html" data-page-link="home">
+          <i class="fa-solid fa-house"></i>
+          <span>Home</span>
+        </a>
+        <a href="Sweets.html" data-page-link="sweets">
+          <i class="fa-solid fa-cake-candles"></i>
+          <span>Sweets</span>
+        </a>
+        <a href="Pickels.html" data-page-link="pickles">
+          <i class="fa-solid fa-lemon"></i>
+          <span>Pickles</span>
+        </a>
+        <a href="Snacks.html" data-page-link="snacks">
+          <i class="fa-solid fa-bag-shopping"></i>
+          <span>Snacks</span>
+        </a>
+        <a href="Spices.html" data-page-link="spices">
+          <i class="fa-solid fa-pepper-hot"></i>
+          <span>Spices</span>
+        </a>
+      </div>
+    </nav>
+
+    <a
+      href="https://wa.me/918522084422"
+      class="whatsapp-fab"
+      target="_blank"
+      rel="noopener"
+      aria-label="Chat on WhatsApp"
+    >
+      <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const form = document.getElementById('contactForm');
+        const status = document.getElementById('formStatus');
+        form.addEventListener('submit', (event) => {
+          event.preventDefault();
+          if (!form.checkValidity()) {
+            form.reportValidity();
+            return;
+          }
+          status.textContent = 'Thank you! We will get back to you shortly.';
+          status.style.color = 'green';
+          form.reset();
+        });
+      });
+    </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/products.js"></script>
+    <script src="js/catalog.js"></script>
+    <script src="cart.js"></script>
+    <script src="js/site.js"></script>
+  </body>
+</html>
+

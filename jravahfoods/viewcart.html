@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Your Cart | JRavah Foods</title>
+    <link rel="icon" type="image/png" href="images/logo4.JPG" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-ZRr3GqQ5GNsMNFc13JUO2c+hJ1ytY1/6VXOvNh+lX6YsJhBKt3vnDnN/SUXOc6Bx/6CkXbkqVKgf/mBlC9FZpA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+    <link rel="stylesheet" href="css/premium-style.css" />
+  </head>
+  <body data-page="shop">
+    <header class="site-navbar">
+      <div class="navbar-inner">
+        <button class="hamburger" data-action="open-menu" aria-label="Open navigation">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <a href="index.html" class="logo-link">
+          <img src="images/JRavahlogo.png" alt="JRavah Foods Logo" />
+        </a>
+        <nav>
+          <ul class="nav-links">
+            <li><a class="nav-link" href="index.html" data-page-link="home">Home</a></li>
+            <li><a class="nav-link" href="shopus3.html" data-page-link="shop">Shop All</a></li>
+            <li><a class="nav-link" href="Pickels.html" data-page-link="pickles">Pickles</a></li>
+            <li><a class="nav-link" href="Sweets.html" data-page-link="sweets">Sweets</a></li>
+            <li><a class="nav-link" href="Spices.html" data-page-link="spices">Spices</a></li>
+            <li><a class="nav-link" href="Snacks.html" data-page-link="snacks">Snacks</a></li>
+            <li><a class="nav-link" href="about.html" data-page-link="about">About Us</a></li>
+            <li><a class="nav-link" href="contact.html" data-page-link="contact">Contact</a></li>
+          </ul>
+        </nav>
+        <a href="viewcart.html" class="cart-button" aria-label="View cart">
+          <i class="fa-solid fa-cart-shopping"></i>
+          <span class="cart-badge">0</span>
+        </a>
+      </div>
+    </header>
+
+    <div class="mobile-menu" data-component="mobile-menu">
+      <button class="close-menu" data-action="close-menu" aria-label="Close menu">&times;</button>
+      <ul>
+        <li><a href="index.html" data-page-link="home">Home</a></li>
+        <li><a href="shopus3.html" data-page-link="shop">Shop Us</a></li>
+        <li><a href="Pickels.html" data-page-link="pickles">Pickles</a></li>
+        <li><a href="Sweets.html" data-page-link="sweets">Sweets</a></li>
+        <li><a href="Spices.html" data-page-link="spices">Spices</a></li>
+        <li><a href="Snacks.html" data-page-link="snacks">Snacks</a></li>
+        <li><a href="about.html" data-page-link="about">About Us</a></li>
+        <li><a href="contact.html" data-page-link="contact">Contact</a></li>
+      </ul>
+    </div>
+
+    <main class="section-wrapper">
+      <h1 class="section-title" data-aos="fade-up">Your Cart</h1>
+      <p data-aos="fade-up">Review your selections before checkout. All products are made to order.</p>
+          
+      <div id="cartItemsContainer" data-aos="fade-up">
+        <p>Loading your cart...</p>
+      </div>
+          
+      <div id="cartTotalSection" style="display: none;" data-aos="fade-up">
+        <div class="cart-total-section">
+          <div class="cart-total-row">
+            <span class="cart-total-label">Items in Cart</span>
+            <span class="cart-total-value" id="cartItemCount">0</span>
+          </div>
+          <div class="cart-total-row">
+            <span class="cart-total-label total">Total Amount</span>
+            <span class="cart-total-value total" id="cartTotalValue">₹0</span>
+          </div>
+        </div>
+        <small style="display: block; text-align: center; color: var(--text-muted); margin-bottom: 1.5rem;">
+          Shipping calculated at checkout. Free shipping above ₹1000 for AP &amp; Telangana.
+        </small>
+      </div>
+          
+      <div class="cart-actions" id="cartActions" style="display: none;" data-aos="fade-up">
+        <a href="shopus3.html" class="btn-pill btn-ghost-pill">
+          <i class="fa-solid fa-arrow-left"></i> Continue Shopping
+        </a>
+        <button class="btn-pill btn-ghost-pill" id="clearCartBtn" style="background: #ffebee; color: #c62828; border-color: #ffebee;">
+          <i class="fa-solid fa-trash"></i> Clear Cart
+        </button>
+        <button class="btn-pill btn-primary-pill" id="checkoutBtn">
+          <i class="fa-brands fa-whatsapp"></i> Order through WhatsApp
+        </button>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-content">
+        <div>
+          <img src="images/JRavahlogo.png" alt="JRavah Foods" class="footer-logo" />
+          <p>High-quality, freshly ground spices and authentic Indian snacks, straight from our farm to your table.</p>
+        </div>
+        <div>
+          <h4 class="footer-heading">Quick Links</h4>
+          <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="shopus3.html">Shop Us</a>
+            <a href="about.html">About Us</a>
+            <a href="contact.html">Contact</a>
+          </div>
+        </div>
+        <div>
+          <h4 class="footer-heading">Policies</h4>
+          <div class="footer-links">
+            <a href="Privacypolicy.html">Privacy Policy</a>
+            <a href="Shipping policy.html">Shipping Policy</a>
+            <a href="Returns.html">Returns &amp; Refunds</a>
+          </div>
+          <div class="d-flex align-items-center">
+  <img src="images/f.png" class="me-2" 
+       alt="FSSAI Logo" 
+       style="width: 45px; height: auto; margin-right: 6px;">
+  <span>Lic. No: <strong>1012502000047</strong></span>
+</div>
+        </div>
+        <div>
+          <h4 class="footer-heading">Contact Us</h4>
+          <div class="footer-links">
+          <a href="https://www.google.com/maps/search/?api=1&query=Jravah+Foods+Vijayawada+Andhra+Pradesh+520015"
+   target="_blank"
+   rel="noopener">
+  <i class="fa-solid fa-location-dot"></i> Vijayawada, AP 520015
+</a>
+
+            <a href="tel:+918522084422"><i class="fa-solid fa-phone"></i> +91 85220 84422</a>
+            <a href="mailto:info@jravahfoods.com"><i class="fa-solid fa-envelope"></i> info@jravahfoods.com</a>
+          </div>
+          <div class="footer-social">
+            <a href="https://www.instagram.com/jravahfoods/" class="social-link" aria-label="JRavah on Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.facebook.com/people/JRavahfoods/61576078651543/" class="social-link" aria-label="JRavah on Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://www.youtube.com/@jrfarmsagri8903" class="social-link" aria-label="JRavah on YouTube"><i class="fa-brands fa-youtube"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>Designed by <a href="https://technologies.synnectify.com" target="_blank" rel="noopener">Synnectify Technologies</a></p>
+        <p>© 2025 JRavah Foods. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <nav class="mobile-bottom-nav">
+      <div class="nav-items">
+        <a href="index.html" data-page-link="home">
+          <i class="fa-solid fa-house"></i>
+          <span>Home</span>
+        </a>
+        <a href="Sweets.html" data-page-link="sweets">
+          <i class="fa-solid fa-cake-candles"></i>
+          <span>Sweets</span>
+        </a>
+        <a href="Pickels.html" data-page-link="pickles">
+          <i class="fa-solid fa-lemon"></i>
+          <span>Pickles</span>
+        </a>
+        <a href="Snacks.html" data-page-link="snacks">
+          <i class="fa-solid fa-bag-shopping"></i>
+          <span>Snacks</span>
+        </a>
+        <a href="Spices.html" data-page-link="spices">
+          <i class="fa-solid fa-pepper-hot"></i>
+          <span>Spices</span>
+        </a>
+      </div>
+    </nav>
+
+    <a
+      href="https://wa.me/918522084422"
+      class="whatsapp-fab"
+      target="_blank"
+      rel="noopener"
+      aria-label="Chat on WhatsApp"
+    >
+      <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/products.js"></script>
+    <script src="js/catalog.js"></script>
+    <script src="cart.js"></script>
+    <script src="js/site.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        renderCartItems();
+        document.getElementById('checkoutBtn').addEventListener('click', () => {
+          const items = window.jravahCart.getCartItems();
+          if (!items.length) {
+            alert('Your cart is empty. Please add some products before checking out.');
+            return;
+          }
+
+          const totals = window.jravahCart.getCartTotals();
+          const lines = items.map((item, index) => {
+            const lineTotal = (item.price || 0) * (item.quantity || 0);
+            const formattedTotal = Number(lineTotal || 0).toLocaleString('en-IN', {
+              maximumFractionDigits: 2,
+            });
+            return `${index + 1}. ${item.name} - ${item.weight} x ${item.quantity} = ₹${formattedTotal}`;
+          });
+
+          const subtotalFormatted = Number(totals.subtotal || 0).toLocaleString('en-IN', {
+            maximumFractionDigits: 2,
+          });
+
+          const messageLines = [
+            'Hello JRavah Foods,',
+            '',
+            'I\'d like to place an order with the following items:',
+            ...lines,
+            '',
+            `Total Amount: ₹${subtotalFormatted}`,
+            '',
+            'Please confirm product availability, shipping charges, and payment options.',
+          ];
+
+          const whatsappText = encodeURIComponent(messageLines.join('\n'));
+          const whatsappUrl = `https://wa.me/918522084422?text=${whatsappText}`;
+          window.open(whatsappUrl, '_blank');
+        });
+        document.getElementById('clearCartBtn').addEventListener('click', () => {
+          if (confirm('Are you sure you want to clear the cart?')) {
+            window.jravahCart.clearCart();
+            renderCartItems();
+          }
+        });
+      });
+
+      function renderCartItems() {
+        const container = document.getElementById('cartItemsContainer');
+        const items = window.jravahCart.getCartItems();
+        const totalSection = document.getElementById('cartTotalSection');
+        const actionsSection = document.getElementById('cartActions');
+
+        if (!items.length) {
+          container.innerHTML = `
+            <div class="cart-empty">
+              <i class="fa-solid fa-cart-shopping"></i>
+              <h3>Your cart is empty</h3>
+              <p>Add some products to get started</p>
+              <a href="shopus3.html" class="btn-pill btn-primary-pill">
+                <i class="fa-solid fa-arrow-left"></i> Continue Shopping
+              </a>
+            </div>
+          `;
+          totalSection.style.display = 'none';
+          actionsSection.style.display = 'none';
+          return;
+        }
+
+        // Desktop table view
+        const tableHTML = `
+          <div class="cart-table-container">
+            <table class="cart-table">
+              <thead>
+                <tr>
+                  <th>Product</th>
+                  <th>Price</th>
+                  <th>Quantity</th>
+                  <th>Subtotal</th>
+                </tr>
+              </thead>
+              <tbody>
+                ${items.map(item => {
+                  const subtotal = (item.price || 0) * (item.quantity || 0);
+                  return `
+                    <tr data-id="${item.productId}" data-weight="${item.weight}">
+                      <td>
+                        <div class="cart-product-cell">
+                          <img src="${item.image}" alt="${item.name}" class="cart-product-image" loading="lazy" onerror="this.src='images/JRavahlogo.png'" />
+                          <div class="cart-product-info">
+                            <h4 class="cart-product-name">${item.name}</h4>
+                            <p class="cart-product-weight">${item.weight}</p>
+                          </div>
+                        </div>
+                      </td>
+                      <td class="cart-price-cell">${formatCurrency(item.price)}</td>
+                      <td class="cart-quantity-cell">
+                        <div class="cart-quantity-control">
+                          <button type="button" class="qty-btn" data-action="minus" aria-label="Decrease quantity">
+                            <i class="fa-solid fa-minus"></i>
+                          </button>
+                          <input type="number" min="1" value="${item.quantity}" class="qty-input" aria-label="Quantity" />
+                          <button type="button" class="qty-btn" data-action="plus" aria-label="Increase quantity">
+                            <i class="fa-solid fa-plus"></i>
+                          </button>
+                        </div>
+                      </td>
+                      <td class="cart-subtotal-cell">
+                        ${formatCurrency(subtotal)}
+                        <button class="cart-remove-btn" aria-label="Remove ${item.name}">
+                          <i class="fa-solid fa-xmark"></i>
+                        </button>
+                      </td>
+                    </tr>
+                  `;
+                }).join('')}
+              </tbody>
+            </table>
+          </div>
+        `;
+
+        // Mobile card view
+        const mobileHTML = `
+          <div class="cart-mobile-view">
+            ${items.map(item => {
+              const subtotal = (item.price || 0) * (item.quantity || 0);
+              return `
+                <div class="cart-mobile-item" data-id="${item.productId}" data-weight="${item.weight}">
+                  <button class="cart-mobile-remove remove-item" aria-label="Remove ${item.name}">
+                    <i class="fa-solid fa-xmark"></i>
+                  </button>
+                  <div class="cart-mobile-header">
+                    <img src="${item.image}" alt="${item.name}" class="cart-mobile-image" loading="lazy" onerror="this.src='images/JRavahlogo.png'" />
+                    <div class="cart-mobile-info">
+                      <h4 class="cart-mobile-name">${item.name}</h4>
+                      <p class="cart-mobile-weight">${item.weight}</p>
+                    </div>
+                  </div>
+                  <div class="cart-mobile-details">
+                    <div class="cart-mobile-price">
+                      <span class="cart-mobile-price-label">Price</span>
+                      <span class="cart-mobile-price-value">${formatCurrency(item.price)}</span>
+                    </div>
+                    <div class="cart-quantity-cell">
+                      <div class="cart-quantity-control">
+                        <button type="button" class="qty-btn" data-action="minus" aria-label="Decrease quantity">
+                          <i class="fa-solid fa-minus"></i>
+                        </button>
+                        <input type="number" min="1" value="${item.quantity}" class="qty-input" aria-label="Quantity" />
+                        <button type="button" class="qty-btn" data-action="plus" aria-label="Increase quantity">
+                          <i class="fa-solid fa-plus"></i>
+                        </button>
+                      </div>
+                    </div>
+                    <div class="cart-mobile-subtotal">
+                      <span class="cart-mobile-price-label">Subtotal</span>
+                      <span class="cart-mobile-subtotal-value">${formatCurrency(subtotal)}</span>
+                    </div>
+                  </div>
+                </div>
+              `;
+            }).join('')}
+          </div>
+        `;
+
+        container.innerHTML = tableHTML + mobileHTML;
+
+        // Attach event listeners
+        container.querySelectorAll('.qty-btn').forEach((btn) => {
+          btn.addEventListener('click', () => {
+            const row = btn.closest('[data-id]');
+            const productId = Number(row.dataset.id);
+            const weight = row.dataset.weight;
+            const input = row.querySelector('.qty-input');
+            const current = Number(input.value) || 1;
+            const newValue = btn.dataset.action === 'plus' ? current + 1 : Math.max(1, current - 1);
+            input.value = newValue;
+            window.jravahCart.updateCartItemQuantity(productId, weight, newValue);
+            renderCartItems();
+          });
+        });
+
+        container.querySelectorAll('.qty-input').forEach((input) => {
+          input.addEventListener('change', () => {
+            const value = Math.max(1, Number(input.value) || 1);
+            input.value = value;
+            const row = input.closest('[data-id]');
+            window.jravahCart.updateCartItemQuantity(Number(row.dataset.id), row.dataset.weight, value);
+            renderCartItems();
+          });
+        });
+
+        container.querySelectorAll('.cart-remove-btn, .cart-mobile-remove').forEach((btn) => {
+          btn.addEventListener('click', () => {
+            const row = btn.closest('[data-id]');
+            // Show toast notification
+            showToast('Item removed from cart');
+            window.jravahCart.removeCartItem(Number(row.dataset.id), row.dataset.weight);
+            renderCartItems();
+          });
+        });
+
+        totalSection.style.display = 'block';
+        actionsSection.style.display = 'flex';
+        updateSummary();
+      }
+
+      function updateSummary() {
+        const summary = window.jravahCart.getCartTotals();
+        document.getElementById('cartItemCount').textContent = summary.itemCount;
+        document.getElementById('cartTotalValue').textContent = formatCurrency(summary.subtotal);
+      }
+
+      function formatCurrency(value) {
+        return `₹${Number(value || 0).toLocaleString('en-IN', { maximumFractionDigits: 2 })}`;
+      }
+    </script>
+  </body>
+</html>
+

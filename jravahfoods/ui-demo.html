@@ -1,0 +1,1099 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JRavah Demo — Modern UI Fixes</title>
+    <link rel="icon" type="image/png" href="images/logo4.JPG" />
+    <!-- If icon fonts are required, ensure the CDN link below does not 404 (see debugging notes). -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-..."
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <style>
+      :root {
+        --clr-bg: #faf7f1;
+        --clr-surface: #ffffff;
+        --clr-accent: #c84f2b;
+        --clr-accent-dark: #8b2d0c;
+        --clr-text: #2f1b15;
+        --clr-muted: #7a635a;
+        --clr-overlay: rgba(0, 0, 0, 0.45); /* tweak overlay color here */
+        --clr-overlay-text: #ffffff; /* tweak overlay text color here */
+        --nav-height: 84px;
+        font-family: "Inter", "Segoe UI", system-ui, -apple-system, sans-serif;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background: var(--clr-bg);
+        color: var(--clr-text);
+        line-height: 1.6;
+        padding-top: var(--nav-height);
+      }
+
+      a {
+        color: var(--clr-accent);
+      }
+
+      img {
+        max-width: 100%;
+        display: block;
+      }
+
+      .section {
+        padding: 3rem clamp(1rem, 5vw, 5rem);
+      }
+
+      header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1000;
+        background: var(--clr-surface);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+      }
+
+      .nav-bar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0.75rem clamp(1rem, 5vw, 4rem);
+        gap: 1rem;
+      }
+
+      .logo {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+
+      .logo img {
+        height: 44px; /* requested logo height */
+        width: auto;
+      }
+
+      nav ul {
+        list-style: none;
+        display: flex;
+        gap: 1.5rem;
+        margin: 0;
+        padding: 0;
+      }
+
+      nav a {
+        text-decoration: none;
+        color: var(--clr-text);
+        font-weight: 600;
+      }
+
+      .cart-icon {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.5rem; /* easily tweak size */
+        color: var(--clr-accent-dark);
+        background: #fff2ea;
+        border-radius: 999px;
+        width: 48px;
+        height: 48px;
+        border: 2px solid var(--clr-accent-dark);
+      }
+
+      .hero {
+        min-height: 60vh;
+        display: grid;
+        gap: 2rem;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        align-items: center;
+      }
+
+      .hero h1 {
+        font-size: clamp(2.5rem, 5vw, 3.8rem);
+        margin-bottom: 1rem;
+      }
+
+      .hero figure {
+        position: relative;
+        border-radius: 20px;
+        overflow: hidden;
+        box-shadow: 0 20px 60px rgba(200, 79, 43, 0.25);
+        background: #000;
+        cursor: pointer;
+      }
+
+      .hero figure img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        opacity: 0.8;
+      }
+
+      .hero figure button {
+        position: absolute;
+        inset: auto 50% 10% auto;
+        transform: translateX(50%);
+        padding: 0.75rem 1.5rem;
+        border-radius: 999px;
+        border: none;
+        background: var(--clr-accent);
+        color: #fff;
+        font-size: 1rem;
+        cursor: pointer;
+        font-weight: 600;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+      }
+
+      .product-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+        gap: 1.5rem;
+        position: relative;
+      }
+
+      .product-card {
+        position: relative;
+        padding: 1.5rem;
+        background: var(--clr-surface);
+        border-radius: 20px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+        overflow: visible; /* allow absolute panel */
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .product-card:focus-within,
+      .product-card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 20px 45px rgba(0, 0, 0, 0.12);
+      }
+
+      .product-media {
+        position: relative;
+        border-radius: 16px;
+        overflow: hidden;
+        margin-bottom: 1rem;
+      }
+
+      .product-media img {
+        height: 220px;
+        width: 100%;
+        object-fit: cover;
+      }
+
+      .product-overlay {
+        position: absolute;
+        inset: 0;
+        background: var(--clr-overlay);
+        color: var(--clr-overlay-text);
+        display: flex;
+        align-items: center;
+        padding: 1rem;
+        font-weight: 600;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        text-shadow: 0 3px 12px rgba(0, 0, 0, 0.6);
+      }
+
+      .product-media:hover .product-overlay,
+      .product-media:focus-within .product-overlay {
+        opacity: 1;
+      }
+
+      .select-btn {
+        width: 100%;
+        padding: 0.9rem 1rem;
+        border-radius: 999px;
+        border: none;
+        background: var(--clr-accent);
+        color: #fff;
+        font-size: 1rem;
+        cursor: pointer;
+        font-weight: 600;
+      }
+
+      .card-panel {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        transform: translateY(110%);
+        background: #fffbe8;
+        border-radius: 20px;
+        padding: 1rem 1.25rem 1.5rem;
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+        transition: transform 0.35s ease;
+        z-index: 10;
+      }
+
+      .product-card.open {
+        z-index: 20;
+      }
+
+      .product-card.open .card-panel {
+        transform: translateY(0);
+      }
+
+      .product-card.open .select-btn {
+        visibility: hidden;
+        opacity: 0;
+        pointer-events: none;
+      }
+
+      .panel-close {
+        position: absolute;
+        top: 0.35rem;
+        right: 0.5rem;
+        border: none;
+        background: transparent;
+        font-size: 1.5rem;
+        cursor: pointer;
+        color: var(--clr-accent-dark);
+      }
+
+      .weight-options {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        margin-bottom: 1rem;
+      }
+
+      .weight-options label {
+        padding: 0.4rem 0.75rem;
+        border-radius: 999px;
+        border: 1px solid var(--clr-muted);
+        cursor: pointer;
+        font-size: 0.9rem;
+      }
+
+      .weight-options input:checked + span {
+        background: var(--clr-accent);
+        color: #fff;
+        border-radius: 999px;
+        padding: 0.4rem 0.75rem;
+      }
+
+      .quantity-control {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        margin-bottom: 1rem;
+      }
+
+      .quantity-control button {
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        border: none;
+        background: var(--clr-accent);
+        color: #fff;
+        font-size: 1.1rem;
+        cursor: pointer;
+      }
+
+      .quantity-control input {
+        width: 48px;
+        text-align: center;
+        border: 1px solid var(--clr-muted);
+        border-radius: 8px;
+        padding: 0.25rem;
+      }
+
+      .total-line {
+        font-weight: 700;
+        margin-bottom: 0.75rem;
+      }
+
+      .add-cart-btn {
+        width: 100%;
+        padding: 0.75rem 1rem;
+        border-radius: 12px;
+        border: none;
+        background: var(--clr-accent-dark);
+        color: #fff;
+        font-weight: 600;
+        cursor: pointer;
+      }
+
+      .best-loved .view-all {
+        margin-top: 1.5rem;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.75rem 1.5rem;
+        border-radius: 999px;
+        border: 2px solid var(--clr-accent);
+        background: transparent;
+        font-weight: 600;
+        cursor: pointer;
+      }
+
+      .values-grid,
+      .footer-links {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 1.5rem;
+      }
+
+      .values-card,
+      .footer-card {
+        padding: 1.25rem;
+        border-radius: 16px;
+        background: var(--clr-surface);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+        display: flex;
+        align-items: flex-start;
+        gap: 1rem;
+      }
+
+      .values-card svg,
+      .footer-card svg {
+        width: 32px;
+        height: 32px;
+        flex-shrink: 0;
+        fill: var(--clr-accent);
+      }
+
+      .footer-card a {
+        color: var(--clr-text);
+        text-decoration: none;
+        font-weight: 600;
+      }
+
+      .cart-section {
+        background: #fff;
+        border-radius: 20px;
+        padding: 2rem;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        margin-top: 3rem;
+      }
+
+      .cart-list {
+        list-style: none;
+        padding: 0;
+        margin: 0 0 1rem;
+      }
+
+      .cart-list li {
+        display: flex;
+        justify-content: space-between;
+        gap: 1rem;
+        border-bottom: 1px solid #eee;
+        padding: 0.75rem 0;
+      }
+
+      .checkout-btn {
+        padding: 0.9rem 1.5rem;
+        border-radius: 12px;
+        border: none;
+        background: #008069;
+        color: #fff;
+        font-size: 1rem;
+        font-weight: 600;
+        cursor: pointer;
+      }
+
+      .toast {
+        position: fixed;
+        bottom: 1rem;
+        left: 50%;
+        transform: translateX(-50%) translateY(150%);
+        background: #2f1b15;
+        color: #fff;
+        padding: 0.75rem 1.5rem;
+        border-radius: 999px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+        transition: transform 0.35s ease;
+        z-index: 1400;
+      }
+
+      .toast.show {
+        transform: translateX(-50%) translateY(0);
+      }
+
+      .video-modal {
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.75);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 1rem;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.3s ease;
+        z-index: 1300;
+      }
+
+      .video-modal.open {
+        opacity: 1;
+        pointer-events: auto;
+      }
+
+      .video-content {
+        background: #000;
+        border-radius: 16px;
+        width: min(90vw, 960px);
+        aspect-ratio: 16 / 9;
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        align-items: stretch;
+      }
+
+      .video-frame {
+        flex: 1;
+      }
+
+      .video-frame iframe {
+        width: 100%;
+        height: 100%;
+        border: none;
+      }
+
+      .video-close {
+        position: absolute;
+        top: 0.5rem;
+        right: 0.5rem;
+        border: none;
+        background: rgba(0, 0, 0, 0.6);
+        color: #fff;
+        font-size: 2rem;
+        line-height: 1;
+        padding: 0.25rem 0.5rem;
+        border-radius: 12px;
+        cursor: pointer;
+      }
+
+      .whatsapp-button {
+        position: fixed;
+        bottom: 1.5rem;
+        right: 1.5rem;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background: #25d366;
+        color: #fff;
+        border: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.8rem;
+        z-index: 1200;
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        cursor: pointer;
+      }
+
+      .qa-checklist,
+      .integration-notes {
+        background: #fff;
+        border-radius: 16px;
+        padding: 1.5rem;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+        margin-top: 2rem;
+      }
+
+      @media (max-width: 768px) {
+        nav ul {
+          flex-wrap: wrap;
+          gap: 0.75rem;
+        }
+
+        .product-media img {
+          height: 180px;
+        }
+
+        .values-grid {
+          grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        }
+      }
+
+      @media (max-width: 480px) {
+        .hero figure button {
+          inset: auto 50% 1rem auto;
+        }
+
+        .product-card {
+          padding: 1rem;
+        }
+
+        .card-panel {
+          left: -0.5rem;
+          right: -0.5rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Keep floating button as a direct child of body (see integration notes). -->
+    <a
+      class="whatsapp-button"
+      href="https://wa.me/918522084422"
+      target="_blank"
+      rel="noopener"
+      aria-label="Open WhatsApp"
+    >
+      <i class="fab fa-whatsapp" aria-hidden="true"></i>
+    </a>
+
+    <header>
+      <div class="nav-bar" role="navigation" aria-label="Primary">
+        <div class="logo">
+          <!-- Replace placeholder logo source -->
+          <img src="https://placehold.co/140x44?text=JRavah" alt="JRavah logo" />
+          <strong>JRavah</strong>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="#best-loved">Best-loved</a></li>
+            <li><a href="#products">Products</a></li>
+            <li><a href="#values">Our Values</a></li>
+            <li><a href="#cart">View Cart</a></li>
+          </ul>
+        </nav>
+        <button class="cart-icon" aria-label="View cart summary">
+          <i class="fas fa-shopping-bag"></i>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <section class="section hero" aria-label="Hero">
+        <div>
+          <p class="eyebrow">Homemade Telugu Pickles & Snacks</p>
+          <h1>Small-batch flavors made like home</h1>
+          <p>
+            Farm-fresh produce, slow-cooked in women-led kitchens. Grandma-level
+            recipes delivered pan-India.
+          </p>
+          <button class="select-btn" onclick="document.querySelector('#best-loved').scrollIntoView({behavior:'smooth'})">
+            Shop Best-loved
+          </button>
+        </div>
+        <figure data-video-id="N4bkYwquu9E" aria-label="Peek into our kitchen">
+          <!-- Replace hero image -->
+          <img src="https://placehold.co/800x520?text=Kitchen+Hero" alt="Homemade pickles being prepared" />
+          <button type="button" class="play-video-btn">Peek into our kitchen</button>
+        </figure>
+      </section>
+
+      <section id="best-loved" class="section best-loved" aria-labelledby="best-loved-title">
+        <div>
+          <h2 id="best-loved-title">Best-loved Homemade Favorites</h2>
+          <p>
+            Showing a preview of our top flavors (2 rows on desktop / 6 items tablet / 4 items mobile).
+            <!-- Item limit rules: desktop=first 8 items, tablet=first 6, mobile=first 4 -->
+          </p>
+        </div>
+        <div class="product-grid preview-grid" data-preview-limit-desktop="8" data-preview-limit-tablet="6" data-preview-limit-mobile="4"></div>
+        <button class="view-all" onclick="window.location.href='Sweets.html'">
+          View all
+          <i class="fas fa-arrow-right"></i>
+        </button>
+      </section>
+
+      <section id="products" class="section products" aria-labelledby="products-title">
+        <div>
+          <h2 id="products-title">Shop Snacks & Pickles</h2>
+          <p>Select a product to see weight, quantity, and live pricing.</p>
+        </div>
+        <div class="product-grid main-grid"></div>
+      </section>
+
+      <section id="values" class="section values" aria-labelledby="values-title">
+        <h2 id="values-title">Our Values</h2>
+        <div class="values-grid">
+          <article class="values-card">
+            <svg role="img" aria-label="100% natural icon">
+              <title>100% Natural</title>
+              <circle cx="16" cy="16" r="14" stroke="currentColor" stroke-width="2" fill="none"></circle>
+              <path d="M10 16s3-8 12-8c0 8-6 12-6 12" stroke="currentColor" stroke-width="2" fill="none"></path>
+            </svg>
+            <div>
+              <h3>100% Natural</h3>
+              <p>No fillers, only whole spices and cold-pressed oils.</p>
+            </div>
+          </article>
+          <article class="values-card">
+            <svg role="img" aria-label="Small batch freshness icon">
+              <title>Small Batch Freshness</title>
+              <rect x="6" y="6" width="20" height="20" rx="4" stroke="currentColor" stroke-width="2" fill="none"></rect>
+              <path d="M12 16h8M12 12h6" stroke="currentColor" stroke-width="2"></path>
+            </svg>
+            <div>
+              <h3>Small Batch Freshness</h3>
+              <p>Batches stay under 25 jars to lock in aroma.</p>
+            </div>
+          </article>
+          <article class="values-card">
+            <svg role="img" aria-label="Women-led kitchens icon">
+              <title>Women-led Kitchens</title>
+              <path d="M12 14a6 6 0 1 1 6 6v4" stroke="currentColor" stroke-width="2" fill="none"></path>
+              <circle cx="18" cy="10" r="4" stroke="currentColor" stroke-width="2" fill="none"></circle>
+            </svg>
+            <div>
+              <h3>Women-Led Kitchens</h3>
+              <p>Every jar is made by women entrepreneurs.</p>
+            </div>
+          </article>
+          <article class="values-card">
+            <svg role="img" aria-label="Telugu culture icon">
+              <title>Telugu Culture</title>
+              <path d="M10 22c6-4 10-8 12-14" stroke="currentColor" stroke-width="2" fill="none"></path>
+              <path d="M4 18c5-3 8-6 10-10" stroke="currentColor" stroke-width="2" fill="none"></path>
+            </svg>
+            <div>
+              <h3>Telugu Culture</h3>
+              <p>Recipes passed down from our Seemandhra grandmothers.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="cart" class="section">
+        <div class="cart-section" aria-live="polite">
+          <h2>View Cart</h2>
+          <ul class="cart-list"></ul>
+          <p class="cart-total">Total: ₹0</p>
+          <button class="checkout-btn">Checkout via WhatsApp</button>
+        </div>
+      </section>
+
+      <section class="section qa-checklist" aria-labelledby="qa-title">
+        <h2 id="qa-title">QA checklist</h2>
+        <ul>
+          <li>Click Select on any product: only that card expands; Select button hides.</li>
+          <li>Hover/focus image overlay shows product name with high contrast.</li>
+          <li>Video thumbnail opens modal, plays once opened, stops on close or ESC.</li>
+          <li>Best-loved section shows preview rows only and "View all" CTA navigates.</li>
+          <li>WhatsApp floating button stays visible at bottom-right; cart checkout opens wa.me with encoded order.</li>
+          <li>Values/ footer icons render (or fallback SVGs appear) on all breakpoints.</li>
+        </ul>
+      </section>
+
+      <section class="section integration-notes" aria-labelledby="integration-title">
+        <h2 id="integration-title">Integration notes</h2>
+        <ul>
+          <li>Move the floating WhatsApp button so it is a direct child of <code>&lt;body&gt;</code> to avoid overflow clipping.</li>
+          <li>Replace placeholder phone numbers, YouTube ID, and product images with real assets.</li>
+          <li>Ensure the Font Awesome CDN (or any icon font) is reachable; check browser network panel if icons are missing.</li>
+          <li>Reuse the product card data structure when integrating with back-end; populate <code>data-price-variants</code> from server JSON.</li>
+          <li>Import this stylesheet into existing bundle or extract CSS variables to your design tokens.</li>
+        </ul>
+      </section>
+    </main>
+
+    <div class="toast" role="status" aria-live="polite"></div>
+
+    <div
+      class="video-modal"
+      id="videoModal"
+      aria-hidden="true"
+      role="dialog"
+      aria-modal="true"
+      aria-label="Kitchen video"
+    >
+      <div class="video-content">
+        <button class="video-close" aria-label="Close video">&times;</button>
+        <div class="video-frame"></div>
+      </div>
+    </div>
+
+    <script>
+      const productData = [
+        {
+          id: "spicy-mango",
+          name: "Spicy Mango Pickle",
+          description: "Stone-ground asafoetida and curry leaves.",
+          image: "https://placehold.co/600x400?text=Spicy+Mango",
+          priceVariants: [
+            { label: "250 g", price: 180 },
+            { label: "500 g", price: 340 },
+            { label: "1 kg", price: 640 },
+          ],
+        },
+        {
+          id: "gongura",
+          name: "Gongura Pickle",
+          description: "Signature tang with roasted sesame.",
+          image: "https://placehold.co/600x400?text=Gongura",
+          priceVariants: [
+            { label: "200 g", price: 160 },
+            { label: "400 g", price: 300 },
+          ],
+        },
+        {
+          id: "karam-podi",
+          name: "Breakfast Karam Podi",
+          description: "Pairs with idli, dosa, pongal.",
+          image: "https://placehold.co/600x400?text=Karam+Podi",
+          priceVariants: [
+            { label: "150 g", price: 110 },
+            { label: "300 g", price: 200 },
+          ],
+        },
+        {
+          id: "bellam-sev",
+          name: "Bellam Murukulu",
+          description: "Jaggery glaze over crunchy sev.",
+          image: "https://placehold.co/600x400?text=Bellam+Sev",
+          priceVariants: [
+            { label: "250 g", price: 150 },
+            { label: "500 g", price: 270 },
+          ],
+        },
+        {
+          id: "chegodilu",
+          name: "Chegodilu",
+          description: "Crisp rice flour rings, pepper hit.",
+          image: "https://placehold.co/600x400?text=Chegodilu",
+          priceVariants: [
+            { label: "200 g", price: 140 },
+            { label: "400 g", price: 260 },
+          ],
+        },
+        {
+          id: "nuvvula-podi",
+          name: "Nuvvula Podi",
+          description: "Sesame-rich dry chutney.",
+          image: "https://placehold.co/600x400?text=Nuvvula+Podi",
+          priceVariants: [
+            { label: "150 g", price: 130 },
+            { label: "300 g", price: 240 },
+          ],
+        },
+        {
+          id: "garlic-pickle",
+          name: "Garlic Pickle",
+          description: "Slow roasted garlic cloves.",
+          image: "https://placehold.co/600x400?text=Garlic+Pickle",
+          priceVariants: [
+            { label: "250 g", price: 200 },
+            { label: "500 g", price: 360 },
+          ],
+        },
+        {
+          id: "masala-peanuts",
+          name: "Masala Peanuts",
+          description: "Dry roast crunch with curry leaves.",
+          image: "https://placehold.co/600x400?text=Masala+Peanuts",
+          priceVariants: [
+            { label: "150 g", price: 120 },
+            { label: "300 g", price: 220 },
+          ],
+        },
+        {
+          id: "thalimpu",
+          name: "Andhra Thalimpu",
+          description: "Ready tempering mix.",
+          image: "https://placehold.co/600x400?text=Thalimpu",
+          priceVariants: [
+            { label: "100 g", price: 90 },
+            { label: "250 g", price: 180 },
+          ],
+        },
+      ];
+
+      const cartState = [];
+      const WHATSAPP_PHONE = "919999999999"; // replace with real phone number from server/config
+
+      const previewGrid = document.querySelector(".preview-grid");
+      const mainGrid = document.querySelector(".main-grid");
+
+      function renderProducts() {
+        productData.forEach((product) => {
+          const card = createProductCard(product);
+          mainGrid.appendChild(card.cloneNode(true));
+          previewGrid.appendChild(card);
+        });
+        applyPreviewLimits();
+      }
+
+      function createProductCard(product) {
+        const card = document.createElement("article");
+        card.className = "product-card";
+        card.dataset.productId = product.id;
+        card.dataset.name = product.name;
+        card.dataset.priceVariants = JSON.stringify(product.priceVariants);
+
+        card.innerHTML = `
+          <figure class="product-media">
+            <img src="${product.image}" alt="${product.name}" />
+            <figcaption class="product-overlay">${product.name}</figcaption>
+          </figure>
+          <h3>${product.name}</h3>
+          <p>${product.description}</p>
+          <button class="select-btn" type="button">Select</button>
+          <div class="card-panel" aria-hidden="true">
+            <button class="panel-close" aria-label="Close selection">&times;</button>
+            <div class="weight-options" role="radiogroup"></div>
+            <div class="quantity-control" aria-label="Quantity">
+              <button type="button" class="qty-minus" aria-label="Decrease quantity">-</button>
+              <input type="number" class="qty-input" value="1" min="1" aria-live="polite" />
+              <button type="button" class="qty-plus" aria-label="Increase quantity">+</button>
+            </div>
+            <p class="total-line">Total: ₹<span class="total-value">0</span></p>
+            <button type="button" class="add-cart-btn">Add to cart</button>
+          </div>
+        `;
+
+        setupCardInteractions(card);
+        return card;
+      }
+
+      function setupCardInteractions(card) {
+        const selectBtn = card.querySelector(".select-btn");
+        const panel = card.querySelector(".card-panel");
+        const weightContainer = card.querySelector(".weight-options");
+        const qtyInput = card.querySelector(".qty-input");
+        const qtyMinus = card.querySelector(".qty-minus");
+        const qtyPlus = card.querySelector(".qty-plus");
+        const totalValue = card.querySelector(".total-value");
+        const addCartBtn = card.querySelector(".add-cart-btn");
+        const variants = JSON.parse(card.dataset.priceVariants);
+
+        weightContainer.innerHTML = variants
+          .map(
+            (variant, index) => `
+              <label>
+                <input type="radio" name="weight-${card.dataset.productId}" value="${variant.label}" data-price="${variant.price}" ${index === 0 ? "checked" : ""} />
+                <span>${variant.label} · ₹${variant.price}</span>
+              </label>
+            `
+          )
+          .join("");
+
+        const radios = weightContainer.querySelectorAll("input[type='radio']");
+
+        function calculateTotal() {
+          const selectedRadio = weightContainer.querySelector("input:checked");
+          const price = Number(selectedRadio.dataset.price);
+          const qty = Number(qtyInput.value) || 1;
+          const total = price * qty;
+          totalValue.textContent = total;
+          return { price, qty, total, weightLabel: selectedRadio.value };
+        }
+
+        function openPanel() {
+          closeOtherCards(card);
+          card.classList.add("open");
+          panel.setAttribute("aria-hidden", "false");
+          calculateTotal();
+        }
+
+        function closePanel() {
+          card.classList.remove("open");
+          panel.setAttribute("aria-hidden", "true");
+        }
+
+        selectBtn.addEventListener("click", openPanel);
+        panel.querySelector(".panel-close").addEventListener("click", closePanel);
+
+        radios.forEach((radio) => radio.addEventListener("change", calculateTotal));
+        qtyMinus.addEventListener("click", () => {
+          qtyInput.value = Math.max(1, Number(qtyInput.value) - 1);
+          calculateTotal();
+        });
+        qtyPlus.addEventListener("click", () => {
+          qtyInput.value = Number(qtyInput.value) + 1;
+          calculateTotal();
+        });
+        qtyInput.addEventListener("input", () => {
+          if (Number(qtyInput.value) < 1) qtyInput.value = 1;
+          calculateTotal();
+        });
+
+        addCartBtn.addEventListener("click", () => {
+          const { price, qty, total, weightLabel } = calculateTotal();
+          cartState.push({
+            id: card.dataset.productId,
+            name: card.dataset.name,
+            weight: weightLabel,
+            qty,
+            unitPrice: price,
+            total,
+          });
+          updateCartUI();
+          showToast(`${card.dataset.name} added to cart`);
+          closePanel();
+        });
+      }
+
+      function closeOtherCards(activeCard) {
+        document.querySelectorAll(".product-card.open").forEach((card) => {
+          if (card !== activeCard) {
+            card.classList.remove("open");
+            card.querySelector(".card-panel").setAttribute("aria-hidden", "true");
+          }
+        });
+      }
+
+      function applyPreviewLimits() {
+        const desktopLimit = Number(previewGrid.dataset.previewLimitDesktop);
+        const tabletLimit = Number(previewGrid.dataset.previewLimitTablet);
+        const mobileLimit = Number(previewGrid.dataset.previewLimitMobile);
+        const cards = previewGrid.children;
+
+        function updateVisibility() {
+          const width = window.innerWidth;
+          let limit = desktopLimit;
+          if (width <= 768) limit = tabletLimit;
+          if (width <= 480) limit = mobileLimit;
+
+          Array.from(cards).forEach((card, index) => {
+            card.style.display = index < limit ? "block" : "none";
+          });
+        }
+
+        updateVisibility();
+        window.addEventListener("resize", updateVisibility);
+      }
+
+      const cartList = document.querySelector(".cart-list");
+      const cartTotalEl = document.querySelector(".cart-total");
+      const checkoutBtn = document.querySelector(".checkout-btn");
+      const toastEl = document.querySelector(".toast");
+
+      function updateCartUI() {
+        cartList.innerHTML = cartState
+          .map(
+            (item) => `
+              <li>
+                <span>${item.name} (${item.weight}) × ${item.qty}</span>
+                <strong>₹${item.total}</strong>
+              </li>
+            `
+          )
+          .join("");
+        const total = cartState.reduce((sum, item) => sum + item.total, 0);
+        cartTotalEl.textContent = `Total: ₹${total}`;
+      }
+
+      function showToast(message) {
+        toastEl.textContent = message;
+        toastEl.classList.add("show");
+        setTimeout(() => toastEl.classList.remove("show"), 2500);
+      }
+
+      checkoutBtn.addEventListener("click", () => {
+        if (!cartState.length) {
+          showToast("Add products before checkout");
+          return;
+        }
+        const total = cartState.reduce((sum, item) => sum + item.total, 0);
+        const lines = cartState
+          .map(
+            (item, index) =>
+              `${index + 1}. ${item.name} (${item.weight}) x${item.qty} = ₹${item.total}`
+          )
+          .join("%0A");
+        const encodedText = encodeURIComponent(
+          `Hi JRavah Team,%0AOrder details:%0A${lines}%0ATotal: ₹${total}`
+        );
+        showToast("Opening WhatsApp with your cart...");
+        window.open(`https://wa.me/${WHATSAPP_PHONE}?text=${encodedText}`, "_blank");
+      });
+
+      const videoModal = document.getElementById("videoModal");
+      const videoFrame = videoModal.querySelector(".video-frame");
+      const videoCloseBtn = videoModal.querySelector(".video-close");
+      let previouslyFocusedElement = null;
+
+      function openVideoModal(videoId) {
+        previouslyFocusedElement = document.activeElement;
+        videoModal.classList.add("open");
+        videoModal.setAttribute("aria-hidden", "false");
+        const iframe = document.createElement("iframe");
+        iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0`;
+        iframe.title = "Peek into our kitchen";
+        iframe.allow =
+          "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture";
+        iframe.allowFullscreen = true;
+        videoFrame.appendChild(iframe);
+        trapFocus(videoModal);
+      }
+
+      function stopVideo() {
+        videoFrame.innerHTML = "";
+      }
+
+      function closeVideoModal() {
+        videoModal.classList.remove("open");
+        videoModal.setAttribute("aria-hidden", "true");
+        stopVideo();
+        releaseFocusTrap();
+        if (previouslyFocusedElement) {
+          previouslyFocusedElement.focus();
+        }
+      }
+
+      document.querySelector(".hero figure").addEventListener("click", (event) => {
+        if (event.target.closest("button")) {
+          const videoId = event.currentTarget.dataset.videoId;
+          openVideoModal(videoId);
+        }
+      });
+
+      videoCloseBtn.addEventListener("click", closeVideoModal);
+      videoModal.addEventListener("click", (e) => {
+        if (e.target === videoModal) closeVideoModal();
+      });
+
+      document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape" && videoModal.classList.contains("open")) {
+          closeVideoModal();
+        }
+      });
+
+      function trapFocus(modal) {
+        const focusableSelectors =
+          'a[href], area[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), button:not([disabled]), [tabindex]:not([tabindex="-1"])';
+        const focusableElements = Array.from(
+          modal.querySelectorAll(focusableSelectors)
+        );
+        if (!focusableElements.length) return;
+        const first = focusableElements[0];
+        const last = focusableElements[focusableElements.length - 1];
+        first.focus();
+
+        function handleTab(e) {
+          if (e.key !== "Tab") return;
+          if (e.shiftKey && document.activeElement === first) {
+            e.preventDefault();
+            last.focus();
+          } else if (!e.shiftKey && document.activeElement === last) {
+            e.preventDefault();
+            first.focus();
+          }
+        }
+
+        modal.addEventListener("keydown", handleTab);
+        modal._removeTrap = () => modal.removeEventListener("keydown", handleTab);
+      }
+
+      function releaseFocusTrap() {
+        if (videoModal._removeTrap) {
+          videoModal._removeTrap();
+          delete videoModal._removeTrap;
+        }
+      }
+
+      // Debugging notes for developers (requested):
+      // - If icons are missing: check network tab for 404s, ensure <link rel="stylesheet" ...> above matches your icon set.
+      // - If the card overlay pushes layout: make sure .card-panel stays position:absolute with transform animation.
+      // - If WhatsApp icon disappears: place the floating button directly inside <body> and avoid overflow:hidden on parents.
+      // - If video keeps playing after close: ensure stopVideo() clears iframe src or send postMessage to YouTube player.
+
+      renderProducts();
+    </script>
+  </body>
+</html>
+

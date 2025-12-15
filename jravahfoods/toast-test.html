@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toast Notification Test</title>
+    <link rel="stylesheet" href="css/premium-style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .test-buttons {
+            margin: 20px 0;
+        }
+        button {
+            padding: 10px 15px;
+            margin: 5px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .add-btn {
+            background-color: #4CAF50;
+            color: white;
+        }
+        .remove-btn {
+            background-color: #f44336;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>Toast Notification Test</h1>
+    
+    <div class="test-buttons">
+        <button class="add-btn" onclick="testAddToast()">Test Add to Cart Toast</button>
+        <button class="remove-btn" onclick="testRemoveToast()">Test Remove from Cart Toast</button>
+        <button onclick="testDefaultToast()">Test Default Toast</button>
+    </div>
+    
+    <div>
+        <h2>Instructions:</h2>
+        <ol>
+            <li>Click "Test Add to Cart Toast" - Should show a gold toast notification</li>
+            <li>Click "Test Remove from Cart Toast" - Should show a red toast notification</li>
+            <li>Click "Test Default Toast" - Should show a red toast notification (default)</li>
+        </ol>
+    </div>
+
+    <script src="cart.js"></script>
+    <script>
+        function testAddToast() {
+            showToast('Product added to cart successfully!', 'add');
+        }
+        
+        function testRemoveToast() {
+            showToast('Product removed from cart', 'remove');
+        }
+        
+        function testDefaultToast() {
+            showToast('This is a default toast message');
+        }
+    </script>
+</body>
+</html>

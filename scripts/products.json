@@ -1,0 +1,668 @@
+[
+  {
+    "name": "Ginger Pickle",
+    "image": "./images/Gingerpickle.jpeg",
+    "category": "Pickles",
+    "stock": "in",
+    "basePrice": 600.0,
+    "ingredients": "Gram flour, carom seeds, turmeric, and high-quality vegetable oil.",
+    "benefits": "Fresh spicy ginger pickle that made from home with rich oils"
+  },
+  {
+    "name": "lemon Pickle",
+    "image": "./images/lemon2.jpg",
+    "category": "Pickles",
+    "stock": "in",
+    "basePrice": 600.0,
+    "ingredients": "Rice flour, roasted split gram, sesame seeds, ghee, and mild chili powder.",
+    "benefits": "Its tangy taste can enhance appetite, especially in hot climates to your table"
+  },
+  {
+    "name": "karela pickle",
+    "image": "./images/karela pickle.jpeg",
+    "category": "Pickles",
+    "stock": "out",
+    "basePrice": 800.0,
+    "ingredients": "Premium cashews, thin sev, poha (flattened rice), dried grapes, and unique seasoning.",
+    "benefits": "Bitter gourd contains charantin and polypeptide-p, which help lower glucose levels"
+  },
+  {
+    "name": "Mutton boneless",
+    "image": "./images/mutton boneless.jpg",
+    "category": "Pickles",
+    "stock": "in",
+    "basePrice": 2200.0,
+    "ingredients": "Besan, red chili flakes, roasted peanuts, curry leaves, and a touch of ginger.",
+    "benefits": "Extra **spicy and flavorful** variety of boondi; great as a standalone snack with a cool beverage."
+  },
+  {
+    "name": "Fish pickle",
+    "image": "./images/fishpickle.jpg",
+    "category": "Pickles",
+    "stock": "out",
+    "basePrice": 1600.0,
+    "ingredients": "Thin sev, boondi, roasted chana dal, rice flakes, and sweet-sour seasoning.",
+    "benefits": "Fish pickle is rich in protein, omega-3 fatty acids, and essential minerals, making it a flavorful yet nutritious"
+  },
+  {
+    "name": "Mango pickle",
+    "image": "./images/Mango3.jpg",
+    "category": "Pickles",
+    "stock": "in",
+    "basePrice": 800.0,
+    "ingredients": "Ground rice and urad dal, combined with light butter and cumin for deep frying.",
+    "benefits": "Fermented mango and spices stimulate digestive enzymes and gut health.it is rich in vitaminC"
+  },
+  {
+    "name": "Prawns pickle",
+    "image": "./images/prawns pickle.jpg",
+    "category": "Pickles",
+    "stock": "in",
+    "basePrice": 1800.0,
+    "ingredients": "Fine chickpea noodles seasoned primarily with black pepper, turmeric, and rock salt.",
+    "benefits": "Promotes heart health, reduces inflammation, and improves brain function."
+  },
+  {
+    "name": "Pandu mirchi pickle",
+    "image": "./images/Pandumirchi.jpeg",
+    "category": "Pickles",
+    "stock": "in",
+    "basePrice": 800.0,
+    "ingredients": "Gram flour, carom seeds, turmeric, and high-quality vegetable oil.",
+    "benefits": "Ripe red chilies contain capsaicin and carotenoids that help fight oxidative stress."
+  },
+  {
+    "name": "Tomato pickle",
+    "image": "./images/Tomato pickle.png",
+    "category": "Pickles",
+    "stock": "in",
+    "basePrice": 600.0,
+    "ingredients": "Rice flour, roasted split gram, sesame seeds, ghee, and mild chili powder.",
+    "benefits": "Its tangy and spicy profile enhances appetite, especially in hot climates."
+  },
+  {
+    "name": "Naatukodi Chicken",
+    "image": "./images/Naatukodi2.jpg",
+    "category": "Pickles",
+    "stock": "in",
+    "basePrice": 2000.0,
+    "ingredients": "Premium cashews, thin sev, poha (flattened rice), dried grapes, and unique seasoning.",
+    "benefits": "Naatukodi is typically raised in natural environments, making it safer and more nutritious"
+  },
+  {
+    "name": "Bellam Avakaya",
+    "image": "./images/bellamavakaya.jpeg",
+    "category": "Pickles",
+    "stock": "in",
+    "basePrice": 800.0,
+    "ingredients": "Besan, red chili flakes, roasted peanuts, curry leaves, and a touch of ginger.",
+    "benefits": "Jaggery and mangoes contain polyphenols and vitamin C that help fight oxidative stress."
+  },
+  {
+    "name": "ChickenwithGongura Pickle",
+    "image": "./images/edit Gongura-Chicken.jpg",
+    "category": "Pickles",
+    "stock": "out",
+    "basePrice": 1800.0,
+    "ingredients": "Thin sev, boondi, roasted chana dal, rice flakes, and sweet-sour seasoning.",
+    "benefits": "Gongura chicken pickle is a spicy, tangy condiment made by blending cooked chicken with gongura leaves"
+  },
+  {
+    "name": "Mutton with gongura",
+    "image": "./images/edit muttonwithgongura.jpg",
+    "category": "Pickles",
+    "stock": "in",
+    "basePrice": 2400.0,
+    "ingredients": "Gram flour, carom seeds, turmeric, and high-quality vegetable oil.",
+    "benefits": "Mutton with gongura pickle is a powerhouse of nutrition—offering high-quality protein, iron, antioxidants, and digestive benefits"
+  },
+  {
+    "name": "Amla pickle",
+    "image": "./images/amla pickle.jpg",
+    "category": "Pickles",
+    "stock": "in",
+    "basePrice": 700.0,
+    "ingredients": "Rice flour, roasted split gram, sesame seeds, ghee, and mild chili powder.",
+    "benefits": "Traditional spiral snack with a delicate flavor; satisfyingly **crisp and savory**, perfect with chai."
+  },
+  {
+    "name": "Garlic pickle",
+    "image": "./images/Garlic pickle.jpg",
+    "category": "Pickles",
+    "stock": "out",
+    "basePrice": 800.0,
+    "ingredients": "Premium cashews, thin sev, poha (flattened rice), dried grapes, and unique seasoning.",
+    "benefits": "Garlic pickle boosts immunity, supports heart health, improves digestion, and offers powerful antioxidant protection."
+  },
+  {
+    "name": "Green chiili",
+    "image": "./images/Greenchillipickle.jpeg",
+    "category": "Pickles",
+    "stock": "in",
+    "basePrice": 600.0,
+    "ingredients": "Besan, red chili flakes, roasted peanuts, curry leaves, and a touch of ginger.",
+    "benefits": "Green chili pickle boosts metabolism, supports digestion, and enhances immunity"
+  },
+  {
+    "name": "Mullakada pickle",
+    "image": "./images/mullakada pickle.jpeg",
+    "category": "Pickles",
+    "stock": "out",
+    "basePrice": 600.0,
+    "ingredients": "Thin sev, boondi, roasted chana dal, rice flakes, and sweet-sour seasoning.",
+    "benefits": "Mullakada pickle (drumstick pickle) is rich in iron, calcium, and antioxidants, supporting bone health, digestion, and immunity."
+  },
+  {
+    "name": "Gongura pickle",
+    "image": "./images/Gongura pickle.png",
+    "category": "Pickles",
+    "stock": "in",
+    "basePrice": 600.0,
+    "ingredients": "Ground rice and urad dal, combined with light butter and cumin for deep frying.",
+    "benefits": "Gongura is a good source of vitamin C, which strengthens immune function."
+  },
+  {
+    "name": "Prawns with gongura",
+    "image": "./images/edit prawnswithgongura.jpeg",
+    "category": "Pickles",
+    "stock": "in",
+    "basePrice": 2000.0,
+    "ingredients": "Rice flour, roasted split gram, sesame seeds, ghee, and mild chili powder.",
+    "benefits": "Prawns with gongura pickle offer a potent mix of lean protein, antioxidants, iron, and digestive-friendly spices—supporting heart health, immunity, and gut function."
+  },
+  {
+    "name": "Mushroom pickle",
+    "image": "./images/Mushroom.jpg",
+    "category": "Pickles",
+    "stock": "in",
+    "basePrice": 1000.0,
+    "ingredients": "Premium cashews, thin sev, poha (flattened rice), dried grapes, and unique seasoning.",
+    "benefits": "Mushroom pickle is rich in fiber, B vitamins, antioxidants, and minerals like iron and manganese—supporting gut health, immunity, and heart function."
+  },
+  {
+    "name": "Chintakaya Pickle",
+    "image": "./images/Chintakaya pickle.jpg",
+    "category": "Pickles",
+    "stock": "in",
+    "basePrice": 800.0,
+    "ingredients": "Besan, red chili flakes, roasted peanuts, curry leaves, and a touch of ginger.",
+    "benefits": "Tamarind is rich in tartaric acid and fiber, which stimulate digestive enzymes and relieve constipation."
+  },
+  {
+    "name": "Bellam sunundalu",
+    "image": "./images/bellamsunundalu.png",
+    "category": "Sweets",
+    "stock": "in",
+    "basePrice": 800.0,
+    "ingredients": "Gram flour, carom seeds, turmeric, and high-quality vegetable oil.",
+    "benefits": "Bellam Sunnundalu (jaggery urad dal laddus) are rich in protein, iron, calcium, and energy—making them excellent for bone strength, immunity, and overall vitality."
+  },
+  {
+    "name": "Dry fruit ladoo",
+    "image": "./images/dryfruitladoo.jpeg",
+    "category": "Sweets",
+    "stock": "in",
+    "basePrice": 1200.0,
+    "ingredients": "Rice flour, roasted split gram, sesame seeds, ghee, and mild chili powder.",
+    "benefits": "Dates, figs, and jaggery provide natural sugars for sustained energy—perfect for winter or post-workout recovery."
+  },
+  {
+    "name": "chalimidi",
+    "image": "./images/chalimidi.jpg",
+    "category": "Sweets",
+    "stock": "out",
+    "basePrice": 600.0,
+    "ingredients": "Premium cashews, thin sev, poha (flattened rice), dried grapes, and unique seasoning.",
+    "benefits": "High fiber content from dates, raisins, and figs promotes gut health and regularity."
+  },
+  {
+    "name": "Gavvalu",
+    "image": "./images/Gavvalu2.png",
+    "category": "Sweets",
+    "stock": "in",
+    "basePrice": 600.0,
+    "ingredients": "Besan, red chili flakes, roasted peanuts, curry leaves, and a touch of ginger.",
+    "benefits": "Sweet Gavvalu (Bellam Gavvalu) are energy-rich, iron-packed traditional Andhra sweets made with rice flour and jaggery—supporting stamina, digestion, and festive nourishment."
+  },
+  {
+    "name": "Honey pure",
+    "image": "./images/Honey.png",
+    "category": "Sweets",
+    "stock": "in",
+    "basePrice": 1400.0,
+    "ingredients": "Thin sev, boondi, roasted chana dal, rice flakes, and sweet-sour seasoning.",
+    "benefits": "Raw honey can kill unwanted bacteria and fungi, making it useful for wound healing and sore throats."
+  },
+  {
+    "name": "Ariselu",
+    "image": "./images/Ariselu2.jpg",
+    "category": "Sweets",
+    "stock": "in",
+    "basePrice": 600.0,
+    "ingredients": "Ground rice and urad dal, combined with light butter and cumin for deep frying.",
+    "benefits": "Jaggery helps improve hemoglobin levels and prevent anemia, especially beneficial for women and children."
+  },
+  {
+    "name": "kajji kaayalu",
+    "image": "./images/kajikaayulu.jpg",
+    "category": "Sweets",
+    "stock": "in",
+    "basePrice": 600.0,
+    "ingredients": "Fine chickpea noodles seasoned primarily with black pepper, turmeric, and rock salt.",
+    "benefits": "Sweet Kajikayalu (also called Gujiya or Karanji) are rich in energy, iron, fiber, and healthy fats—making them ideal for festive nourishment, digestion, and immunity"
+  },
+  {
+    "name": "Nuvvula laddu",
+    "image": "./images/nuvvulaladdu.png",
+    "category": "Sweets",
+    "stock": "in",
+    "basePrice": 800.0,
+    "ingredients": "Gram flour, carom seeds, turmeric, and high-quality vegetable oil.",
+    "benefits": "Nuvvula Laddu (Sesame Laddu) is rich in calcium, iron, healthy fats, and antioxidants—supporting bone strength, heart health, immunity, and energy."
+  },
+  {
+    "name": "Palli chikki",
+    "image": "./images/Pallichikki.jpg",
+    "category": "Sweets",
+    "stock": "in",
+    "basePrice": 600.0,
+    "ingredients": "Rice flour, roasted split gram, sesame seeds, ghee, and mild chili powder.",
+    "benefits": "Peanuts provide plant-based protein that supports muscle repair and satiety."
+  },
+  {
+    "name": "Kaju Chikki",
+    "image": "./images/kajikaayulu.jpg",
+    "category": "Sweets",
+    "stock": "in",
+    "basePrice": 1000.0,
+    "ingredients": "Premium cashews, thin sev, poha (flattened rice), dried grapes, and unique seasoning.",
+    "benefits": "Kaju Chikki (Cashew Brittle) is rich in healthy fats, protein, iron, and antioxidants—supporting heart health, energy, immunity, and brain function."
+  },
+  {
+    "name": "kaaju chikki",
+    "image": "./images/kaju chikki.png",
+    "category": "Sweets",
+    "stock": "in",
+    "basePrice": 1000.0,
+    "ingredients": "Gram flour, carom seeds, turmeric, and high-quality vegetable oil.",
+    "benefits": "Kaju Chikki (Cashew Brittle) is rich in healthy fats, protein, iron, and antioxidants—supporting heart health, energy, immunity, and brain function."
+  },
+  {
+    "name": "honey",
+    "image": "./images/Honey.png",
+    "category": "Sweets",
+    "stock": "in",
+    "basePrice": 1400.0,
+    "ingredients": "Ground rice and urad dal, combined with light butter and cumin for deep frying.",
+    "benefits": "Raw honey can kill unwanted bacteria and fungi, making it useful for wound healing and sore throats."
+  },
+  {
+    "name": "Biryani masala",
+    "image": "./images/biryanipodi.jpg",
+    "category": "Spices",
+    "stock": "in",
+    "basePrice": 400.0,
+    "ingredients": "Gram flour, carom seeds, turmeric, and high-quality vegetable oil.",
+    "benefits": "Biryani masala offers digestive, anti-inflammatory, and antioxidant benefits thanks to its blend of spices like cumin, cloves, cinnamon, and cardamom."
+  },
+  {
+    "name": "Dhaniya powder",
+    "image": "./images/Dhaniya powder.jpg",
+    "category": "Spices",
+    "stock": "in",
+    "basePrice": 500.0,
+    "ingredients": "Rice flour, roasted split gram, sesame seeds, ghee, and mild chili powder.",
+    "benefits": "Dhaniya powder (coriander powder) supports digestion, regulates blood sugar, reduces inflammation, and boosts immunity."
+  },
+  {
+    "name": "Garam masala",
+    "image": "./images/Garam masala.png",
+    "category": "Spices",
+    "stock": "out",
+    "basePrice": 1000.0,
+    "ingredients": "Premium cashews, thin sev, poha (flattened rice), dried grapes, and unique seasoning.",
+    "benefits": "Garam masala boosts digestion, immunity, heart health, and metabolism thanks to its potent blend of antioxidant-rich spices."
+  },
+  {
+    "name": "Ginger garlic paste",
+    "image": "./images/Gingergarlicpaste.jpg",
+    "category": "Spices",
+    "stock": "in",
+    "basePrice": 600.0,
+    "ingredients": "Besan, red chili flakes, roasted peanuts, curry leaves, and a touch of ginger.",
+    "benefits": "Ginger garlic paste improves digestion, boosts immunity, reduces inflammation, and supports heart health."
+  },
+  {
+    "name": "kaakara kaya karam",
+    "image": "./images/kakarakayakaaram.jpg",
+    "category": "Spices",
+    "stock": "in",
+    "basePrice": 800.0,
+    "ingredients": "Thin sev, boondi, roasted chana dal, rice flakes, and sweet-sour seasoning.",
+    "benefits": "Its bitter compounds stimulate digestive enzymes and relieve constipation and bloating."
+  },
+  {
+    "name": "Kandhi kaaram",
+    "image": "./images/kandikaaram.jpg",
+    "category": "Spices",
+    "stock": "in",
+    "basePrice": 800.0,
+    "ingredients": "Ground rice and urad dal, combined with light butter and cumin for deep frying.",
+    "benefits": "Roasted lentils and cumin stimulate digestive enzymes and improve gut health."
+  },
+  {
+    "name": "Munagaku kaaram",
+    "image": "./images/munagaku kaaram.jpg",
+    "category": "Spices",
+    "stock": "in",
+    "basePrice": 800.0,
+    "ingredients": "Fine chickpea noodles seasoned primarily with black pepper, turmeric, and rock salt.",
+    "benefits": "Helps prevent anemia and boosts hemoglobin levels—especially beneficial for women and children"
+  },
+  {
+    "name": "Nalla kaaram",
+    "image": "./images/nallakaaram.jpg",
+    "category": "Spices",
+    "stock": "in",
+    "basePrice": 800.0,
+    "ingredients": "Gram flour, carom seeds, turmeric, and high-quality vegetable oil.",
+    "benefits": "Nalla Kaaram (Andhra-style spicy podi) is rich in iron, antioxidants, fiber, and healthy fats—supporting digestion, immunity, heart health, and energy."
+  },
+  {
+    "name": "Guntur kaaram",
+    "image": "./images/Guntur kaaram.jpg",
+    "category": "Spices",
+    "stock": "in",
+    "basePrice": 800.0,
+    "ingredients": "Rice flour, roasted split gram, sesame seeds, ghee, and mild chili powder.",
+    "benefits": "Stimulates digestive enzymes and helps reduce bloating and indigestion."
+  },
+  {
+    "name": "Sambar podi",
+    "image": "./images/sambar podi.jpeg",
+    "category": "Spices",
+    "stock": "out",
+    "basePrice": 400.0,
+    "ingredients": "Premium cashews, thin sev, poha (flattened rice), dried grapes, and unique seasoning.",
+    "benefits": "Sambar podi is a traditional South Indian spice mix used to prepare sambar, a lentil-based vegetable stew."
+  },
+  {
+    "name": "Karivepaku kaaram",
+    "image": "./images/karivepu kaaram.jpg",
+    "category": "Spices",
+    "stock": "in",
+    "basePrice": 800.0,
+    "ingredients": "Besan, red chili flakes, roasted peanuts, curry leaves, and a touch of ginger.",
+    "benefits": "Karivepaku Kaaram (Curry Leaf Spice Mix) is rich in iron, calcium, antioxidants, and fiber—supporting digestion, immunity, hair growth, and heart health."
+  },
+  {
+    "name": "Menthi powder",
+    "image": "./images/methipowder.jpg",
+    "category": "Spices",
+    "stock": "out",
+    "basePrice": 300.0,
+    "ingredients": "Thin sev, boondi, roasted chana dal, rice flakes, and sweet-sour seasoning.",
+    "benefits": "Menthi powder (fenugreek seed powder) supports digestion, balances blood sugar, boosts hair and skin health, and reduces inflammation."
+  },
+  {
+    "name": "Turmeric powder",
+    "image": "./images/Turmeric.jpg",
+    "category": "Spices",
+    "stock": "in",
+    "basePrice": 400.0,
+    "ingredients": "Gram flour, carom seeds, turmeric, and high-quality vegetable oil.",
+    "benefits": "Turmeric powder is a powerful anti-inflammatory and antioxidant spice that supports immunity, digestion, heart health, brain function, and skin wellness."
+  },
+  {
+    "name": "velluli kaarampodi",
+    "image": "./images/velluli kaaram podi.jpg",
+    "category": "Spices",
+    "stock": "in",
+    "basePrice": 800.0,
+    "ingredients": "Rice flour, roasted split gram, sesame seeds, ghee, and mild chili powder.",
+    "benefits": "Neutralizes free radicals and boosts the body’s own antioxidant enzymes."
+  },
+  {
+    "name": "Rasam podi",
+    "image": "./images/Rasampodi.jpg",
+    "category": "Spices",
+    "stock": "out",
+    "basePrice": 400.0,
+    "ingredients": "Premium cashews, thin sev, poha (flattened rice), dried grapes, and unique seasoning.",
+    "benefits": "Rasam podi is a spice blend used to make rasam, a tangy South Indian soup made with tamarind, tomatoes, and lentils."
+  },
+  {
+    "name": "Nuvvula kaaram",
+    "image": "./images/nuvvulakaarampodi.jpg",
+    "category": "Spices",
+    "stock": "in",
+    "basePrice": 600.0,
+    "ingredients": "Besan, red chili flakes, roasted peanuts, curry leaves, and a touch of ginger.",
+    "benefits": "Nuvvula Kaaram (Sesame Spice Mix) is rich in calcium, iron, healthy fats, and antioxidants—supporting bone strength, heart health, digestion, and immunity."
+  },
+  {
+    "name": "Nallakaaram",
+    "image": "./images/Nallakaaram.jpg",
+    "category": "Spices",
+    "stock": "in",
+    "basePrice": 800.0,
+    "ingredients": "Gram flour, carom seeds, turmeric, and high-quality vegetable oil.",
+    "benefits": "Nalla Kaaram (Andhra-style spicy podi) is rich in iron, antioxidants, fiber, and healthy fats—supporting digestion, immunity, heart health, and energy."
+  },
+  {
+    "name": "biryanipodi",
+    "image": "./images/biryanipodi.jpg",
+    "category": "Spices",
+    "stock": "in",
+    "basePrice": 400.0,
+    "ingredients": "Premium cashews, thin sev, poha (flattened rice), dried grapes, and unique seasoning.",
+    "benefits": "Biryani masala offers digestive, anti-inflammatory, and antioxidant benefits thanks to its blend of spices like cumin, cloves, cinnamon, and cardamom."
+  },
+  {
+    "name": "Turmeric",
+    "image": "./images/Turmeric.jpg",
+    "category": "Spices",
+    "stock": "in",
+    "basePrice": 400.0,
+    "ingredients": "Thin sev, boondi, roasted chana dal, rice flakes, and sweet-sour seasoning.",
+    "benefits": "Turmeric powder is a powerful anti-inflammatory and antioxidant spice that supports immunity, digestion, heart health, brain function, and skin wellness."
+  },
+  {
+    "name": "velluli kaaram podi",
+    "image": "./images/velluli kaaram podi.jpg",
+    "category": "Spices",
+    "stock": "in",
+    "basePrice": 800.0,
+    "ingredients": "Ground rice and urad dal, co",
+    "benefits": "Neutralizes free radicals and boosts the body’s own antioxidant enzymes."
+  },
+  {
+    "name": "Chakralu",
+    "image": "./images/chakralu2.jpg",
+    "category": "Snacks",
+    "stock": "in",
+    "basePrice": 400.0,
+    "ingredients": "Gram flour, carom seeds, turmeric, and high-quality vegetable oil.",
+    "benefits": "Cumin and sesame seeds stimulate digestive enzymes and help reduce bloating."
+  },
+  {
+    "name": "Palli pakodi",
+    "image": "./images/pallipakodi.jpg",
+    "category": "Snacks",
+    "stock": "in",
+    "basePrice": 600.0,
+    "ingredients": "Rice flour, roasted split gram, sesame seeds, ghee, and mild chili powder.",
+    "benefits": "Palli Pakodi (peanut fritters) offers plant-based protein, healthy fats"
+  },
+  {
+    "name": "Ribbonpakoda",
+    "image": "./images/Ribbonpakoda.jpg",
+    "category": "Snacks",
+    "stock": "out",
+    "basePrice": 500.0,
+    "ingredients": "Premium cashews, thin sev, poha (flattened rice), dried grapes, and unique seasoning.",
+    "benefits": "Ribbon Pakoda provides energy, plant-based protein, and digestive support—thanks to its blend of rice flour, gram flour, and spices."
+  },
+  {
+    "name": "spicy Boondi",
+    "image": "./images/karam bundi.png",
+    "category": "Snacks",
+    "stock": "in",
+    "basePrice": 500.0,
+    "ingredients": "Besan, red chili flakes, roasted peanuts, curry leaves, and a touch of ginger.",
+    "benefits": "Spicy boondi provides plant-based protein, healthy fats, and digestive support"
+  },
+  {
+    "name": "Raagi chakralu",
+    "image": "./images/Raagichakralu.jpg",
+    "category": "Snacks",
+    "stock": "in",
+    "basePrice": 600.0,
+    "ingredients": "Thin sev, boondi, roasted chana dal, rice flakes, and sweet-sour seasoning.",
+    "benefits": "Helps combat anemia and supports hemoglobin production, especially beneficial for women and children."
+  },
+  {
+    "name": "chegodilu",
+    "image": "./images/chegodilu2.jpg",
+    "category": "Snacks",
+    "stock": "in",
+    "basePrice": 600.0,
+    "ingredients": "Ground rice and urad dal, combined with light butter and cumin for deep frying.",
+    "benefits": "Chegodilu are small, ring-shaped snacks made from rice flour, urad dal flour, cumin seeds, sesame seeds"
+  },
+  {
+    "name": "Atukula mixture",
+    "image": "./images/atukulu.jpg",
+    "category": "Snacks",
+    "stock": "in",
+    "basePrice": 500.0,
+    "ingredients": "Fine chickpea noodles seasoned primarily with black pepper, turmeric, and rock salt.",
+    "benefits": "Atukula Mixture (flattened rice snack mix) is rich in iron, fiber, protein."
+  },
+  {
+    "name": "Saggubiyam chekkalu",
+    "image": "./images/Saggubiyamchekkalu.jpg",
+    "category": "Snacks",
+    "stock": "in",
+    "basePrice": 600.0,
+    "ingredients": "Gram flour, carom seeds, turmeric, and high-quality vegetable oil.",
+    "benefits": "Sago is rich in carbohydrates—100g provides around 355 kcal and 94g of carbs, making it ideal for quick energy."
+  },
+  {
+    "name": "kaara poosa",
+    "image": "./images/kaarapoosa.jpg",
+    "category": "Snacks",
+    "stock": "in",
+    "basePrice": 500.0,
+    "ingredients": "Rice flour, roasted split gram, sesame seeds, ghee, and mild chili powder.",
+    "benefits": "Helps improve hemoglobin levels and supports energy metabolism."
+  },
+  {
+    "name": "RaagiChekralu",
+    "image": "./images/Raagichakralu.jpg",
+    "category": "Snacks",
+    "stock": "in",
+    "basePrice": 600.0,
+    "ingredients": "Premium cashews, thin sev, poha (flattened rice), dried grapes, and unique seasoning.",
+    "benefits": "Raagi Chekralu (finger millet spirals) are rich in calcium, iron, fiber, and antioxidants"
+  },
+  {
+    "name": "saggubiyam chekkalu.jpg",
+    "image": "./images/Saggubiyamchekkalu.jpg",
+    "category": "Snacks",
+    "stock": "in",
+    "basePrice": 600.0,
+    "ingredients": "Besan, red chili flakes, roasted peanuts, curry leaves, and a touch of ginger.",
+    "benefits": "Sago is rich in carbohydrates—100g provides around 355 kcal and 94g of carbs, making it ideal for quick energy."
+  },
+  {
+    "name": "Ribbon pakoda",
+    "image": "./images/Ribbonpakoda.jpg",
+    "category": "Snacks",
+    "stock": "out",
+    "basePrice": 500.0,
+    "ingredients": "Gram flour, carom seeds, turmeric, and high-quality vegetable oil.",
+    "benefits": "Ribbon Pakoda provides energy, plant-based protein, and digestive support—thanks to its blend of rice flour, gram flour, and spices."
+  },
+  {
+    "name": "Ragichekralu",
+    "image": "./images/Raagichakralu.jpg",
+    "category": "Snacks",
+    "stock": "in",
+    "basePrice": 600.0,
+    "ingredients": "Rice flour, roasted split gram, sesame seeds, ghee, and mild chili powder.",
+    "benefits": "Helps combat anemia and supports hemoglobin production, especially beneficial for women and children."
+  },
+  {
+    "name": "Kara Boondi",
+    "image": "./images/karam bundi.png",
+    "category": "Snacks",
+    "stock": "in",
+    "basePrice": 500.0,
+    "ingredients": "Besan, red chili flakes, roasted peanuts, curry leaves, and a touch of ginger.",
+    "benefits": "Spicy boondi provides plant-based protein, healthy fats, and digestive support"
+  },
+  {
+    "name": "atukulu",
+    "image": "./images/atukulu.jpg",
+    "category": "Snacks",
+    "stock": "in",
+    "basePrice": 500.0,
+    "ingredients": "Thin sev, boondi, roasted chana dal, rice flakes, and sweet-sour seasoning.",
+    "benefits": "Atukula Mixture (flattened rice snack mix) is rich in iron, fiber, protein."
+  },
+  {
+    "name": "Chekralu",
+    "image": "./images/chakralu2.jpg",
+    "category": "Snacks",
+    "stock": "in",
+    "basePrice": 400.0,
+    "ingredients": "Ground rice and urad dal, combined with light butter and cumin for deep frying.",
+    "benefits": "Cumin and sesame seeds stimulate digestive enzymes and help reduce bloating."
+  },
+  {
+    "name": "kaara Boondi",
+    "image": "./images/karam bundi.png",
+    "category": "Mixed",
+    "stock": "in",
+    "basePrice": 500.0,
+    "ingredients": "Gram flour, carom seeds, turmeric, and high-quality vegetable oil.",
+    "benefits": "Spicy boondi provides plant-based protein, healthy fats, and digestive support"
+  },
+  {
+    "name": "Velluli karampodi",
+    "image": "./images/velluli kaaram podi.jpg",
+    "category": "Mixed",
+    "stock": "in",
+    "basePrice": 800.0,
+    "ingredients": "Fine chickpea noodles seasoned primarily with black pepper, turmeric, and rock salt.",
+    "benefits": "Neutralizes free radicals and boosts the body’s own antioxidant enzymes."
+  },
+  {
+    "name": "Pandu mirchi",
+    "image": "./images/Pandumirchi.jpeg",
+    "category": "Mixed",
+    "stock": "in",
+    "basePrice": 800.0,
+    "ingredients": "Thin sev, boondi, roasted chana dal, rice flakes, and sweet-sour seasoning.",
+    "benefits": "Ripe red chilies contain capsaicin and carotenoids that help fight oxidative stress."
+  },
+  {
+    "name": "Chicken gongura pickle",
+    "image": "./images/Chicken Pickle.png",
+    "category": "Mixed",
+    "stock": "out",
+    "basePrice": 1800.0,
+    "ingredients": "Gram flour, carom seeds, turmeric, and high-quality vegetable oil.",
+    "benefits": "Gongura chicken pickle is a spicy, tangy condiment made by blending cooked chicken with gongura leaves"
+  },
+  {
+    "name": "Green chilli",
+    "image": "./images/Greenchillipickle.jpeg",
+    "category": "Mixed",
+    "stock": "in",
+    "basePrice": 600.0,
+    "ingredients": "Thin sev, boondi, roasted chana dal, rice flakes, and sweet-sour seasoning.",
+    "benefits": "Green chili pickle boosts metabolism, supports digestion, and enhances immunity"
+  }
+]

@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JRavah Foods | Authentic Andhra Pickles & Snacks</title>
+    <link rel="icon" type="image/png" href="images/logo4.JPG" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-ZRr3GqQ5GNsMNFc13JUO2c+hJ1ytY1/6VXOvNh+lX6YsJhBKt3vnDnN/SUXOc6Bx/6CkXbkqVKgf/mBlC9FZpA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+    <link rel="stylesheet" href="css/premium-style.css?v=1.0.1" />
+    <link rel="stylesheet" href="css/food-videos.css?v=1.0.1" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+    <!-- Resource hints for critical resources -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap" as="style">
+    <link rel="preload" href="css/premium-style.css" as="style">
+    <!-- Critical CSS for trust section -->
+    <style>
+      #trust {
+        padding: 4rem 1.5rem;
+      }
+      
+      #trust .section-wrapper {
+        max-width: var(--max-width);
+        margin: 0 auto;
+      }
+      
+      #trust .section-title {
+        display: inline-flex;
+        gap: 0.75rem;
+        align-items: center;
+        font-size: 2rem;
+        color: var(--dark-brown);
+        position: relative;
+        padding-bottom: 0.75rem;
+        font-family: 'Poppins', sans-serif;
+        line-height: 1.2;
+        margin: 0 0 0.75rem;
+      }
+      
+      #trust .category-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        margin-top: 2rem;
+      }
+      
+      @media (max-width: 768px) {
+        #trust .category-grid {
+          grid-template-columns: repeat(2, 1fr);
+          gap: 16px;
+        }
+      }
+      
+      @media (min-width: 769px) and (max-width: 1024px) {
+        #trust .category-grid {
+          grid-template-columns: repeat(3, 1fr);
+          gap: 20px;
+        }
+      }
+      
+      @media (min-width: 1025px) {
+        #trust .category-grid {
+          grid-template-columns: repeat(4, 1fr);
+          gap: 24px;
+        }
+      }
+      
+      .contact-card {
+        background: var(--white);
+        border-radius: 16px;
+        padding: 1.5rem;
+        box-shadow: var(--shadow-light);
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        border-top: 4px solid var(--golden-accent);
+        opacity: 1;
+        transform: translateY(0);
+        transition: opacity 0.3s ease, transform 0.3s ease;
+      }
+      
+      .contact-card .icon {
+        width: 40px;
+        height: 40px;
+        border-radius: 10px;
+        background: var(--light-pink);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--orange-primary);
+        font-size: 1.2rem;
+      }
+      
+
+    </style>
+  </head>
+  <body data-page="home">
+    <header class="site-navbar">
+      <div class="navbar-inner">
+        <button class="hamburger" data-action="open-menu" aria-label="Open navigation">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <a href="index.html" class="logo-link">
+          <img src="images/JRavahlogo.png" alt="JRavah Foods Logo" />
+        </a>
+        <nav>
+          <ul class="nav-links">
+            <li><a class="nav-link" href="index.html" data-page-link="home">Home</a></li>
+            <li><a class="nav-link" href="shopus3.html" data-page-link="shop">Shop All</a></li>
+            <li><a class="nav-link" href="Pickels.html" data-page-link="pickles">Pickles</a></li>
+            <li><a class="nav-link" href="Sweets.html" data-page-link="sweets">Sweets</a></li>
+            <li><a class="nav-link" href="Spices.html" data-page-link="spices">Spices</a></li>
+            <li><a class="nav-link" href="Snacks.html" data-page-link="snacks">Snacks</a></li>
+            <li><a class="nav-link" href="about.html" data-page-link="about">About Us</a></li>
+            <li><a class="nav-link" href="contact.html" data-page-link="contact">Contact</a></li>
+          </ul>
+        </nav>
+        <a href="viewcart.html" class="cart-button" aria-label="View cart">
+          <i class="fa-solid fa-cart-shopping"></i>
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</i>
+          <span class="cart-badge">0</span>
+        </a>
+      </div>
+    </header>
+
+    <div class="mobile-menu" data-component="mobile-menu">
+      <button class="close-menu" data-action="close-menu" aria-label="Close menu">&times;</button>
+      <ul>
+        <li><a href="index.html" data-page-link="home">Home</a></li>
+        <li><a href="shopus3.html" data-page-link="shop">Shop Us</a></li>
+        <li><a href="Pickels.html" data-page-link="pickles">Pickles</a></li>
+        <li><a href="Sweets.html" data-page-link="sweets">Sweets</a></li>
+        <li><a href="Spices.html" data-page-link="spices">Spices</a></li>
+        <li><a href="Snacks.html" data-page-link="snacks">Snacks</a></li>
+        <li><a href="about.html" data-page-link="about">About Us</a></li>
+        <li><a href="contact.html" data-page-link="contact">Contact</a></li>
+      </ul>
+        </div>
+    
+    <section class="hero">
+      <div class="hero-content" data-aos="fade-up">
+        <!-- <p>Authentic Andhra Delights</p>
+        <h1>Taste That Speaks Tradition</h1>
+        <p>Crafting authentic flavors of Vijayawada—fresh, pure, and made with love by JRavah Foods.</p> -->
+        <div class="hero-cta">
+          <!-- <a href="shopus3.html" class="btn-pill btn-primary-pill">Shop Now</a>
+          <a href="Pickels.html" class="btn-pill btn-ghost-pill">Explore Pickles</a> -->
+        </div>
+        </div>
+    </section>
+
+    <style>
+/* Smooth infinite loop (Right → Left) */
+@keyframes loop-rl {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* Smooth infinite loop (Left → Right) */
+@keyframes loop-lr {
+  0% { transform: translateX(-50%); }
+  100% { transform: translateX(0); }
+}
+</style>
+
+
+<!-- ⭐ TOP MARQUEE (Right → Left) -->
+<div style="
+  width:100%; overflow:hidden; position:relative;
+  background:linear-gradient(to right, rgba(255,140,0,0.25), rgba(0,0,0,0.1), rgba(255,140,0,0.25));
+  padding:10px 0;
+">
+  
+  <!-- Fade edges -->
+  <div style="position:absolute; left:0; top:0; height:100%; width:60px;
+      background:linear-gradient(to right, rgba(0,0,0,0.5), transparent); pointer-events:none;"></div>
+  <div style="position:absolute; right:0; top:0; height:100%; width:60px;
+      background:linear-gradient(to left, rgba(0,0,0,0.5), transparent); pointer-events:none;"></div>
+
+  <div style="
+    display:flex; width:200%;
+    animation: loop-rl 25s linear infinite;
+    font-size:18px; font-weight:bold; color:white;
+    text-shadow:0 0 8px rgba(255,140,0,0.8);
+  "
+  onmouseover="this.style.animationPlayState='paused'"
+  onmouseout="this.style.animationPlayState='running'">
+
+    <!-- Text duplicated for seamless loop -->
+    <span style="padding-right:50px; white-space:nowrap;">
+       • Free Shipping above Rs.1000 for AP & Telangana 🎉
+    </span>
+
+    <span style="padding-right:50px; white-space:nowrap;">
+      Free Shipping above Rs.1000 for AP & Telangana 🎉 • Free Shipping above Rs.1000 for AP & Telangana 🎉
+    </span>
+
+  </div>
+</div>
+
+
+<center>
+  <h4 
+    class="text-3xl md:text-4xl font-extrabold tracking-wide 
+           bg-gradient-to-r from-orange-500 via-orange-400 to-green-500 
+           bg-clip-text text-transparent animate-pulse">
+    Taste That Speaks Tradition
+  </h4>
+</center>
+
+
+<!-- ⭐ BOTTOM MARQUEE (Left → Right) -->
+<div style="
+  width:100%; overflow:hidden; position:relative; margin-top:8px;
+  background:linear-gradient(to right, rgba(0,255,120,0.2), rgba(0,0,0,0.1), rgba(255,140,0,0.25));
+  padding:10px 0;
+">
+
+  <!-- Fade edges -->
+  <div style="position:absolute; left:0; top:0; height:100%; width:60px;
+      background:linear-gradient(to right, rgba(0,0,0,0.5), transparent); pointer-events:none;"></div>
+  <div style="position:absolute; right:0; top:0; height:100%; width:60px;
+      background:linear-gradient(to left, rgba(0,0,0,0.5), transparent); pointer-events:none;"></div>
+
+  <div style="
+    display:flex; width:200%;
+    animation: loop-lr 28s linear infinite;
+    font-size:18px; font-weight:bold; color:white;
+    text-shadow:0 0 8px rgba(255,140,0,0.8);
+  "
+  onmouseover="this.style.animationPlayState='paused'"
+  onmouseout="this.style.animationPlayState='running'">
+
+    <!-- Text duplicated for seamless loop -->
+    <span style="padding-right:50px; white-space:nowrap;">
+        Place your order internationally or chat with us on WhatsApp! 
+    </span>
+
+    <span style="padding-right:50px; white-space:nowrap;">
+      Place your order internationally or chat with us on WhatsApp! • Place your order internationally or chat with us on WhatsApp!
+    </span>
+
+  </div>
+</div>
+
+
+    <section id="featured">
+      <div class="section-wrapper">
+        <h2 class="section-title" data-aos="fade-up">Best-Loved Homemade Favourites</h2>
+        <p data-aos="fade-up">
+          Handcrafted batches of Andhra pickles, sweets, spices, and snacks—celebrating the warmth of Amma’s kitchen.
+        </p>
+        <div
+          class="catalog-grid"
+          data-product-grid
+          data-category="Pickles,Sweets,Spices,Snacks"
+          data-limit="8"
+          data-featured="home"
+        >
+          <div class="product-grid" data-role="grid"></div>
+          <p class="no-results" data-role="empty">No products found. Please adjust your filters.</p>
+        </div>
+                            </div>
+    </section>
+
+    <section id="categories" class="light-bg">
+      <div class="section-wrapper">
+        <h2 class="section-title" data-aos="fade-up">Shop by Category</h2>
+        <div class="category-grid" data-aos="fade-up">
+          <article class="category-card">
+            <img src="images/pickles.png" alt="Pickles" loading="lazy" />
+                        <div class="card-content">
+              <!-- <h4 style="color: orange;">Pickles</h4> -->
+              <a href="Pickels.html" class="btn-pill btn-primary-pill">Shop Pickles</a>
+                            </div>
+          </article>
+          <article class="category-card">
+            <img src="images/sweets.png" alt="Sweets" loading="lazy" />
+                        <div class="card-content">
+              <!-- <h3>Sweets</h3> -->
+              <a href="Sweets.html" class="btn-pill btn-primary-pill">Shop Sweets</a>
+                            </div>
+          </article>
+          <article class="category-card">
+            <img src="images/spices (2).png" alt="Spices" loading="lazy" />
+                        <div class="card-content">
+              <!-- <h3 style="color: bisque;">Spices</h3> -->
+              <a href="Spices.html" class="btn-pill btn-primary-pill">Shop Spices</a>
+                            </div>
+          </article>
+          <article class="category-card">
+            <img src="images/Snacks.png" alt="Snacks" loading="lazy" />
+                        <div class="card-content">
+              <!-- <h3>Snacks</h3> -->
+              <a href="Snacks.html" class="btn-pill btn-primary-pill">Shop Snack</a>
+                            </div>
+          </article>
+                        </div>
+                    </div>
+    </section>
+    <style>
+      /* --- Modern Category Section --- */
+#categories {
+  padding: 60px 5%;
+  background: #fafafa;
+}
+
+#categories .section-title {
+  text-align: center;
+  font-size: 38px;
+  font-weight: 700;
+  color: #2d2d2d;
+  margin-bottom: 40px;
+}
+
+/* Default: Desktop 4 columns */
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+.category-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.35);
+  backdrop-filter: blur(12px);
+  transition: 0.4s ease;
+  box-shadow: 0px 12px 28px rgba(0, 0, 0, 0.15);
+}
+
+.category-card:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0px 18px 40px rgba(0, 0, 0, 0.22);
+}
+
+.category-card img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  border-radius: 22px 22px 0 0;
+  transition: 0.4s ease;
+}
+
+.category-card:hover img {
+  transform: scale(1.08);
+}
+
+.card-content {
+  padding: 20px;
+  text-align: center;
+}
+
+/* Modern Pill Button */
+.btn-primary-pill {
+  display: inline-block;
+  padding: 12px 28px;
+  color: #fff;
+  border-radius: 50px;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  background: linear-gradient(90deg, #ff7a00, #ff4d00);
+  transition: 0.3s ease;
+}
+
+.btn-primary-pill:hover {
+  background: linear-gradient(90deg, #ff4d00, #ff2300);
+  transform: translateY(-3px);
+}
+
+/* --- RESPONSIVE BREAKPOINTS --- */
+
+/* Tablet: 3 cards per row */
+@media (max-width: 992px) {
+  .category-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Mobile: 2 cards per row */
+@media (max-width: 768px) {
+  .category-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+
+/* Small mobile: 1 card per row (optional but recommended) */
+@media (max-width: 480px) {
+  .category-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+    </style>
+
+     <!-- <section id="videos"> -->
+      <!-- <div class="section-wrapper">
+        <h2 class="section-title" data-aos="fade-up">The Delicious Food Making</h2>
+        <p data-aos="fade-up">Peek inside our kitchen as we stir, grind, and pickle with love.</p>
+        <div class="video-scroll"> -->
+          <!-- <div class="video-card" data-video-card data-aos="zoom-in">
+            <div class="video-thumb">
+              <img src="images/Mango3.jpg" alt="Mango Pickle prep" loading="lazy" />
+                            </div>
+            <video src="images/Mango.mp4" controls></video>
+            <div class="video-actions">
+              <button type="button" class="video-control-btn" data-video-control="mute">Mute</button>
+              <button type="button" class="video-control-btn" data-video-control="reset">Back</button>
+            </div>
+                        </div>
+          <div class="video-card" data-video-card data-aos="zoom-in">
+            <div class="video-thumb">
+              <img src="images/dryfruitladoo.jpeg" alt="Dry fruit ladoo" loading="lazy" />
+                    </div>
+            <video src="images/Dryfruitladoo.mp4" controls></video>
+            <div class="video-actions">
+              <button type="button" class="video-control-btn" data-video-control="mute">Mute</button>
+              <button type="button" class="video-control-btn" data-video-control="reset">Back</button>
+            </div>
+                            </div>
+          <div class="video-card" data-video-card data-aos="zoom-in">
+            <div class="video-thumb">
+              <img src="images/Snacks.jpg" alt="Snacks prep" loading="lazy" />
+                            </div>
+            <video src="images/Snack.mp4" controls></video>
+            <div class="video-actions">
+              <button type="button" class="video-control-btn" data-video-control="mute">Mute</button>
+              <button type="button" class="video-control-btn" data-video-control="reset">Back</button>
+            </div>
+                        </div>
+                    </div>
+                </div> -->
+    <section id="videos">
+      <div class="container py-5">
+        <div class="section-wrapper">
+          <h2 class="section-title" data-aos="fade-up">The Delicious Food Making</h2>
+          <p data-aos="fade-up">Peek inside our kitchen as we stir, grind, and pickle with love.</p>
+          <!-- <div class="video-gallery">
+            <div class="video-card">
+              <div class="video-thumbnail">
+                <img src="images/Chicken Pickle.png" alt="Chicken Pickle Preparation" class="thumbnail-image">
+                <div class="play-overlay">
+                  <div class="play-icon"></div>
+                </div>
+              </div>
+              <div class="video-player">
+                <video src="images/ChickenPickle.mp4" controls class="video-element"></video>
+                <button class="close-video" aria-label="Close video">&times;</button>
+                <button class="mute-toggle" aria-label="Toggle audio">🔊</button>
+              </div>
+            </div>
+            <div class="video-card">
+              <div class="video-thumbnail">
+                <img src="images/dryfruitladoo.jpeg" alt="Dry Fruit Ladoo Preparation" class="thumbnail-image">
+                <div class="play-overlay">
+                  <div class="play-icon"></div>
+                </div>
+              </div>
+              <div class="video-player">
+                <video src="images/Dryfruitladoo.mp4" controls class="video-element"></video>
+                <button class="close-video" aria-label="Close video">&times;</button>
+                <button class="mute-toggle" aria-label="Toggle audio">🔊</button>
+              </div>
+            </div>
+            <div class="video-card">
+              <div class="video-thumbnail">
+                <img src="images/nallakaaram.jpg" alt="Karapodi Preparation" class="thumbnail-image">
+                <div class="play-overlay">
+                  <div class="play-icon"></div>
+                </div>
+              </div>
+              <div class="video-player">
+                <video src="images/Karampodi.mp4" controls class="video-element"></video>
+                <button class="close-video" aria-label="Close video">&times;</button>
+                <button class="mute-toggle" aria-label="Toggle audio">🔊</button>
+              </div>
+            </div>
+            <div class="video-card">
+              <div class="video-thumbnail">
+                <img src="images/Mango3.jpg" alt="Mango Pickle Preparation" class="thumbnail-image">
+                <div class="play-overlay">
+                  <div class="play-icon"></div>
+                </div>
+              </div>
+              <div class="video-player">
+                <video src="images/Mango.mp4" controls class="video-element"></video>
+                <button class="close-video" aria-label="Close video">&times;</button>
+                <button class="mute-toggle" aria-label="Toggle audio">🔊</button>
+              </div>
+            </div>
+          </div> -->
+          <div class="videos-wrapper">
+        <div class="videos-track" id="videosTrack">
+          <!-- CARD 1 -->
+          <div class="video-card">
+            <img src="images/Chicken Pickle.png" class="video-thumb" alt="Chicken Pickle Preparation" />
+            <button class="custom-play-btn" data-video="ChickenPickle" aria-label="Play video">▶</button>
+          </div>
+
+          <!-- CARD 2 -->
+          <div class="video-card">
+            <img src="images/dryfruitladoo.jpeg" class="video-thumb" alt="Dry Fruit Ladoo Preparation" />
+            <button class="custom-play-btn" data-video="Dryfruitladoo" aria-label="Play video">▶</button>
+          </div>
+
+          <!-- CARD 3 -->
+          <div class="video-card">
+            <img src="images/nallakaaram.jpg" class="video-thumb" alt="Karapodi Preparation" />
+            <button class="custom-play-btn" data-video="Karampodi" aria-label="Play video">▶</button>
+          </div>
+
+          <!-- CARD 4 -->
+          <div class="video-card">
+            <img src="images/Mushroom.jpg" class="video-thumb" alt="Mushroom Pickle Preparation" />
+            <button class="custom-play-btn" data-video="MushroomPickle" aria-label="Play video">▶</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+
+
+
+
+    
+    <section id="trust">
+      <div class="section-wrapper">
+        <h2 class="section-title" data-aos="fade-up">Why Choose JRavah Foods?</h2>
+        <div class="category-grid">
+          <article class="contact-card">
+            <div class="icon"><i class="fa-solid fa-kitchen-set"></i></div>
+            <h3>100% Homemade</h3>
+            <p>Small-batch recipes made in sanitized kitchens by women artisans.</p>
+          </article>
+          <article class="contact-card">
+            <div class="icon"><i class="fa-solid fa-seedling"></i></div>
+            <h3>No Preservatives</h3>
+            <p>Just farm-fresh ingredients, cold-pressed oils, and aromatic spices.</p>
+          </article>
+          <article class="contact-card">
+            <div class="icon"><i class="fa-solid fa-fire-flame-curved"></i></div>
+            <h3>Traditional Andhra Recipes</h3>
+            <p>Passed down through Amma's kitchen—bold, tangy, and authentic.</p>
+          </article>
+          <article class="contact-card">
+            <div class="icon"><i class="fa-solid fa-heart"></i></div>
+            <h3>Fresh &amp; Made with Care</h3>
+            <p>Packed only after you order—so every bite tastes freshly made.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+    
+
+    
+    <footer class="site-footer">
+      <div class="footer-content">
+        <div>
+          <img src="images/JRavahlogo.png" alt="JRavah Foods" class="footer-logo" />
+          <p>High-quality, freshly ground spices and authentic Indian snacks, straight from our farm to your table.</p>
+                </div>
+        <div>
+          <h4 class="footer-heading">Quick Links</h4>
+          <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="shopus3.html">Shop Us</a>
+            <a href="about.html">About Us</a>
+            <a href="contact.html">Contact</a>
+                </div>
+                </div>
+        <div>
+          <h4 class="footer-heading">Policies</h4>
+          <div class="footer-links">
+            <a href="Privacypolicy.html">Privacy Policy</a>
+            <a href="Shipping policy.html">Shipping Policy</a>
+            <a href="Returns.html">Returns &amp; Refunds</a>
+                </div>
+          <div class="d-flex align-items-center">
+  <img src="images/f.png" class="me-2" 
+       alt="FSSAI Logo" 
+       style="width: 45px; height: auto; margin-right: 6px;">
+  <span>Lic. No: <strong>1012502000047</strong></span>
+</div>
+                </div>
+        <div>
+          <h4 class="footer-heading">Contact Us</h4>
+          <div class="footer-links">
+          <a href="https://www.google.com/maps/search/?api=1&query=Jravah+Foods+Vijayawada+Andhra+Pradesh+520015"
+   target="_blank"
+   rel="noopener">
+  <i class="fa-solid fa-location-dot"></i> Vijayawada, AP 520015
+</a>
+
+            <a href="tel:+918522084422"><i class="fa-solid fa-phone"></i> +918522084422</a>
+            <a href="mailto:info@jravahfoods.com"><i class="fa-solid fa-envelope"></i> info@jravahfoods.com</a>
+                </div>
+          <div class="footer-social">
+            <a href="https://www.instagram.com/jravahfoods/" class="social-link" aria-label="JRavah on Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.facebook.com/people/JRavahfoods/61576078651543/" class="social-link" aria-label="JRavah on Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://www.youtube.com/@jrfarmsagri8903" class="social-link" aria-label="JRavah on YouTube"><i class="fa-brands fa-youtube"></i></a>
+          </div>
+        </div>
+    </div> 
+      <div class="footer-bottom">
+        <p>Designed by <a href="https://technologies.synnectify.com" target="_blank" rel="noopener">Synnectify Technologies</a></p>
+        <p>© 2025 JRavah Foods. All rights reserved.</p>
+  </div>
+</footer>
+
+    <!-- <section id="trust">
+      <div class="section-wrapper">
+        <h2 class="section-title" data-aos="fade-up">Why Choose JRavah Foods?</h2>
+        <div class="category-grid">
+          <article class="contact-card">
+            <div class="icon"><i class="fa-solid fa-kitchen-set"></i></div>
+            <h3>100% Homemade</h3>
+            <p>Small-batch recipes made in sanitized kitchens by women artisans.</p>
+          </article>
+          <article class="contact-card">
+            <div class="icon"><i class="fa-solid fa-seedling"></i></div>
+            <h3>No Preservatives</h3>
+            <p>Just farm-fresh ingredients, cold-pressed oils, and aromatic spices.</p>
+          </article>
+          <article class="contact-card">
+            <div class="icon"><i class="fa-solid fa-fire-flame-curved"></i></div>
+            <h3>Traditional Andhra Recipes</h3>
+            <p>Passed down through Amma's kitchen—bold, tangy, and authentic.</p>
+          </article>
+          <article class="contact-card">
+            <div class="icon"><i class="fa-solid fa-heart"></i></div>
+            <h3>Fresh &amp; Made with Care</h3>
+            <p>Packed only after you order—so every bite tastes freshly made.</p>
+          </article>
+        </div>
+      </div>
+    </section> -->
+      
+    <nav class="mobile-bottom-nav">
+      <div class="nav-items">
+        <a href="index.html" data-page-link="home">
+          <i class="fa-solid fa-house"></i>
+          <span>Home</span>
+            </a>
+        <a href="Sweets.html" data-page-link="sweets">
+          <i class="fa-solid fa-cake-candles"></i>
+          <span>Sweets</span>
+            </a> 
+        <a href="Pickels.html" data-page-link="pickles">
+          <i class="fa-solid fa-lemon"></i>
+          <span>Pickles</span>
+            </a>
+        <a href="Snacks.html" data-page-link="snacks">
+          <i class="fa-solid fa-bag-shopping"></i>
+          <span>Snacks</span>
+            </a>
+        <a href="Spices.html" data-page-link="spices">
+          <i class="fa-solid fa-pepper-hot"></i>
+          <span>Spices</span>
+            </a>
+        </div>
+    </nav>
+    
+    <a
+      href="https://wa.me/918522084422"
+      class="whatsapp-fab"
+      target="_blank"
+      rel="noopener"
+      aria-label="Chat on WhatsApp"
+    >
+      <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/products.js"></script>
+    <script src="js/catalog.js"></script>
+    <script src="cart.js"></script>
+    <script src="js/site.js"></script>
+    <script src="js/food-videos.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        if (window.jQuery && typeof jQuery.fn.slick === 'function') {
+          var $slider = jQuery('.video-slider');
+          if ($slider.length) {
+            $slider.slick({
+              slidesToShow: 3,
+              slidesToScroll: 1,
+              autoplay: false,
+              arrows: false,
+              swipe: false,
+              draggable: false,
+              pauseOnHover: true,
+              pauseOnFocus: true,
+              responsive: [
+                {
+                  breakpoint: 992,
+                  settings: {
+                    slidesToShow: 2,
+                    arrows: false,
+                    swipe: false,
+                    draggable: false
+                  },
+                },
+                {
+                  breakpoint: 600,
+                  settings: {
+                    slidesToShow: 1,
+                    arrows: false,
+                    swipe: false,
+                    draggable: false
+                  },
+                },
+              ],
+            });
+
+            $slider.on('click', '.slide', function (event) {
+              // Don't trigger if clicking the back button
+              if (jQuery(event.target).closest('.back-button').length) {
+                return;
+              }
+
+              var $slide = jQuery(this);
+              var video = $slide.find('video').get(0);
+              if (!video) return;
+
+              // If this video is already playing, do nothing
+              if ($slide.hasClass('playing')) {
+                return;
+              }
+
+              // Pause and reset all other videos
+              $slider.find('.slide').each(function () {
+                var $otherSlide = jQuery(this);
+                var otherVideo = $otherSlide.find('video').get(0);
+                if (otherVideo && otherVideo !== video) {
+                  otherVideo.pause();
+                  otherVideo.currentTime = 0;
+                  $otherSlide.removeClass('playing');
+                }
+              });
+
+              // Enable audio and play the clicked video
+              video.muted = false;
+              $slide.addClass('playing');
+              
+              // Try to play with audio, fallback to muted if blocked
+              var playPromise = video.play();
+              if (playPromise !== undefined) {
+                playPromise.catch(function(error) {
+                  console.log('Autoplay with audio was prevented, playing muted:', error);
+                  video.muted = true;
+                  video.play();
+                });
+              }
+            });
+
+            // Back button handler
+            $slider.on('click', '.back-button', function (event) {
+              event.stopPropagation();
+              var $slide = jQuery(this).closest('.slide');
+              var video = $slide.find('video').get(0);
+              
+              if (video) {
+                video.pause();
+                video.currentTime = 0;
+                video.muted = true;
+              }
+              
+              $slide.removeClass('playing');
+            });
+          }
+        }
+      });
+    </script>
+</body>
+</html>
+

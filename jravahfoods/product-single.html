@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JRavah Foods | Product</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-ZRr3GqQ5GNsMNFc13JUO2c+hJ1ytY1/6VXOvNh+lX6YsJhBKt3vnDnN/SUXOc6Bx/6CkXbkqVKgf/mBlC9FZpA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+    <link rel="stylesheet" href="css/premium-style.css" />
+  </head>
+  <body data-page="shop">
+    <header class="site-navbar">
+      <div class="navbar-inner">
+        <button class="hamburger" data-action="open-menu" aria-label="Open navigation">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <a href="index.html" class="logo-link">
+          <img src="images/JRavahlogo.png" alt="JRavah Foods Logo" />
+        </a>
+        <nav>
+          <ul class="nav-links">
+            <li><a href="index.html" data-page-link="home">Home</a></li>
+            <li><a href="shopus3.html" data-page-link="shop">Shop Us</a></li>
+            <li><a href="Pickels.html" data-page-link="pickles">Pickles</a></li>
+            <li><a href="Sweets.html" data-page-link="sweets">Sweets</a></li>
+            <li><a href="Spices.html" data-page-link="spices">Spices</a></li>
+            <li><a href="Snacks.html" data-page-link="snacks">Snacks</a></li>
+            <li><a href="about.html" data-page-link="about">About Us</a></li>
+            <li><a href="contact.html" data-page-link="contact">Contact</a></li>
+          </ul>
+        </nav>
+        <a href="viewcart.html" class="cart-button" aria-label="View cart">
+          <i class="fa-solid fa-cart-shopping"></i>
+          <span class="cart-badge">0</span>
+        </a>
+      </div>
+    </header>
+
+    <div class="mobile-menu" data-component="mobile-menu">
+      <button class="close-menu" data-action="close-menu" aria-label="Close menu">&times;</button>
+      <ul>
+        <li><a href="index.html" data-page-link="home">Home</a></li>
+        <li><a href="shopus3.html" data-page-link="shop">Shop Us</a></li>
+        <li><a href="Pickels.html" data-page-link="pickles">Pickles</a></li>
+        <li><a href="Sweets.html" data-page-link="sweets">Sweets</a></li>
+        <li><a href="Spices.html" data-page-link="spices">Spices</a></li>
+        <li><a href="Snacks.html" data-page-link="snacks">Snacks</a></li>
+        <li><a href="about.html" data-page-link="about">About Us</a></li>
+        <li><a href="contact.html" data-page-link="contact">Contact</a></li>
+      </ul>
+    </div>
+
+    <main id="singleProductContainer">
+      <section class="section-wrapper">
+        <div class="about-grid" id="productDetailGrid">
+          <div class="product-visual" data-aos="fade-right">
+            <img id="productImage" src="" alt="Product image" />
+          </div>
+          <div class="product-details" data-aos="fade-left">
+            <p class="tagline" id="productCategory"></p>
+            <h1 id="productTitle"></h1>
+            <p id="productDescription"></p>
+            <div class="form-group">
+              <label>Choose Weight</label>
+              <select id="weightSelect" class="weight-select"></select>
+            </div>
+            <div class="form-group">
+              <label>Quantity</label>
+              <div class="quantity-control">
+                <button type="button" data-action="minus" class="qty-btn">-</button>
+                <input type="number" min="1" value="1" id="quantityInput" class="qty-input" />
+                <button type="button" data-action="plus" class="qty-btn">+</button>
+              </div>
+            </div>
+            <div class="price-display" id="singlePriceDisplay"></div>
+            <button class="btn-pill btn-primary-pill" id="addToCartBtn">
+              <i class="fa-solid fa-cart-plus"></i>
+              Add to Cart
+            </button>
+          </div>
+        </div>
+        <div class="form-card mt-4" data-aos="fade-up">
+          <h3>Product Details</h3>
+          <table class="policy-table">
+            <tbody>
+              <tr>
+                <th>Ingredients</th>
+                <td id="productIngredients"></td>
+              </tr>
+              <tr>
+                <th>Available Weights</th>
+                <td id="productWeights"></td>
+              </tr>
+              <tr>
+                <th>Category</th>
+                <td id="productCategoryRow"></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="light-bg">
+        <div class="section-wrapper">
+          <h2 class="section-title" data-aos="fade-up">You May Also Like</h2>
+          <div class="product-grid" id="relatedProducts"></div>
+          <p class="no-results" id="relatedEmpty" style="display: none;">More goodies coming soon!</p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-content">
+        <div>
+          <img src="images/JRavahlogo.png" alt="JRavah Foods" class="footer-logo" />
+          <p>High-quality, freshly ground spices and authentic Indian snacks, straight from our farm to your table.</p>
+        </div>
+        <div>
+          <h4 class="footer-heading">Quick Links</h4>
+          <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="shopus3.html">Shop Us</a>
+            <a href="about.html">About Us</a>
+            <a href="contact.html">Contact</a>
+          </div>
+        </div>
+        <div>
+          <h4 class="footer-heading">Policies</h4>
+          <div class="footer-links">
+            <a href="Privacypolicy.html">Privacy Policy</a>
+            <a href="Shipping policy.html">Shipping Policy</a>
+            <a href="Returns.html">Returns &amp; Refunds</a>
+          </div>
+          <div class="d-flex align-items-center">
+  <img src="images/f.png" class="me-2" 
+       alt="FSSAI Logo" 
+       style="width: 45px; height: auto; margin-right: 6px;">
+  <span>Lic. No: <strong>1012502000047</strong></span>
+</div>
+        </div>
+        <div>
+          <h4 class="footer-heading">Contact Us</h4>
+          <div class="footer-links">
+          <a href="https://www.google.com/maps/search/?api=1&query=Jravah+Foods+Vijayawada+Andhra+Pradesh+520015"
+   target="_blank"
+   rel="noopener">
+  <i class="fa-solid fa-location-dot"></i> Vijayawada, AP 520015
+</a>
+
+            <a href="tel:+918522084422"><i class="fa-solid fa-phone"></i> +918522084422</a>
+            <a href="mailto:info@jravahfoods.com"><i class="fa-solid fa-envelope"></i> info@jravahfoods.com</a>
+          </div>
+          <div class="footer-social">
+            <a href="#" class="social-link" aria-label="JRavah on Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" class="social-link" aria-label="JRavah on Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" class="social-link" aria-label="JRavah on YouTube"><i class="fa-brands fa-youtube"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>Designed by <a href="https://technologies.synnectify.com" target="_blank" rel="noopener">Synnectify Technologies</a></p>
+        <p>© 2025 JRavah Foods. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <nav class="mobile-bottom-nav">
+      <div class="nav-items">
+        <a href="index.html" data-page-link="home">
+          <i class="fa-solid fa-house"></i>
+          <span>Home</span>
+        </a>
+        <a href="Sweets.html" data-page-link="sweets">
+          <i class="fa-solid fa-cake-candles"></i>
+          <span>Sweets</span>
+        </a>
+        <a href="Pickels.html" data-page-link="pickles">
+          <i class="fa-solid fa-lemon"></i>
+          <span>Pickles</span>
+        </a>
+        <a href="Snacks.html" data-page-link="snacks">
+          <i class="fa-solid fa-bag-shopping"></i>
+          <span>Snacks</span>
+        </a>
+        <a href="Spices.html" data-page-link="spices">
+          <i class="fa-solid fa-pepper-hot"></i>
+          <span>Spices</span>
+        </a>
+      </div>
+    </nav>
+
+    <a
+      href="https://wa.me/918522084422"
+      class="whatsapp-fab"
+      target="_blank"
+      rel="noopener"
+      aria-label="Chat on WhatsApp"
+    >
+      <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/products.js"></script>
+    <script src="js/catalog.js"></script>
+    <script src="cart.js"></script>
+    <script src="js/single-product.js"></script>
+    <script src="js/site.js"></script>
+  </body>
+</html>
+

@@ -1,0 +1,131 @@
+.videos-track {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 15px;
+  /* Removed animation to prevent extra scrolling images */
+}
+
+/* Keyframes removed as infinite scroll is disabled */
+
+/* Clone track styling removed as cloning is disabled */
+.videos-track.cloned {
+  display: none;
+}
+
+/* Ensure uniform video sizing using aspect-ratio and object-fit */
+.video-card {
+  position: relative;
+  aspect-ratio: 16/9; /* Maintain consistent 16:9 aspect ratio */
+  flex: 0 0 auto;
+  width: 300px;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.video-thumb {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Ensure video is fully visible in its card at a small size when hovered */
+.video-card:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+  z-index: 20;
+}
+
+.video-card.active {
+  z-index: 15;
+}
+
+.custom-play-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 20px;
+  cursor: pointer;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.custom-play-btn:hover {
+  background: rgba(0, 0, 0, 0.9);
+  transform: translate(-50%, -50%) scale(1.1);
+}
+
+/* Back button styles */
+.back-btn {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 6px 10px;
+  cursor: pointer;
+  font-size: 14px;
+  z-index: 11;
+  transition: background 0.3s ease;
+}
+
+.back-btn:hover {
+  background: rgba(0, 0, 0, 0.9);
+}
+
+.inline-player {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Video player container */
+.video-player-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+}
+
+/* DESKTOP EFFECTS - Increased gap between cards */
+@media (min-width: 768px) {
+  .videos-track {
+    gap: 25px; /* Increased gap for better spacing on desktop */
+  }
+  
+  /* Removed hover animation as scrolling is disabled */
+}
+
+/* Additional improvements for better desktop experience */
+@media (min-width: 1024px) {
+  .videos-track {
+    gap: 45px; /* Even larger gap on larger screens */
+  }
+}
+
+/* Wrapper for video cards */
+.videos-wrapper {
+  overflow-x: auto;
+  overflow-y: hidden;
+  width: 100%;
+  position: relative;
+  /* Changed to auto height to properly contain cards without extra images */
+  height: auto;
+  contain: layout style;
+  padding: 10px 0; /* Added padding for better visual spacing */
+  scrollbar-width: thin;
+}

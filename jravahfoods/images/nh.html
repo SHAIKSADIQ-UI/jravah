@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Responsive Product Card</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .product-card {
+      position: relative;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      background-image: url('shadow-img.jpg'); /* Replace with your shadowed main item image */
+      background-size: cover;
+      background-position: center;
+      transition: transform 0.3s ease;
+    }
+
+    .product-card:hover .extra-content {
+      display: block;
+    }
+
+    .card-body {
+      position: relative;
+      background: rgba(255, 255, 255, 0.9);
+      padding: 15px;
+    }
+
+    .quantity-options {
+      margin: 10px 0;
+    }
+
+    .quantity-btn {
+      margin-right: 5px;
+      padding: 5px 10px;
+      border: 1px solid #333;
+      border-radius: 20px;
+      background-color: #f8f9fa;
+      cursor: pointer;
+    }
+
+    .quantity-btn.active {
+      background-color: #333;
+      color: #fff;
+    }
+
+    .extra-content {
+      display: none;
+      margin-top: 10px;
+      font-size: 0.9rem;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container py-5">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <div id="productCard" class="product-card">
+        <div class="card-body">
+          <div class="d-flex justify-content-between align-items-center mb-2">
+            <h5 class="card-title">Quantity:</h5>
+            <button class="btn btn-close" onclick="window.close();"></button>
+          </div>
+
+          <div id="quantityOptions" class="quantity-options">
+            <button class="quantity-btn" data-price="325">250 Grms</button>
+            <button class="quantity-btn" data-price="650">500 Grms</button>
+            <button class="quantity-btn" data-price="1300">1 kg</button>
+          </div>
+
+          <p><span id="price">₹325.00</span></p>
+          <button class="btn btn-dark w-100 mb-2">ADD TO CART</button>
+
+          <h6>Immunity Dry Fruit Laddu</h6>
+          <p class="text-muted mb-2">Shop All, Sweet's</p>
+          <p class="mb-2"><del>₹1,300.00</del> - ₹325.00</p>
+          <button class="btn btn-outline-dark w-100">SELECT OPTIONS</button>
+
+          <div id="extraContent" class="extra-content">
+            Boost your wellness with our Immunity Dry Fruit Laddu made from premium dry fruits like almonds, cashews, and walnuts.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+  const quantityBtns = document.querySelectorAll('.quantity-btn');
+  const price = document.getElementById('price');
+  const extraContent = document.getElementById('extraContent');
+
+  quantityBtns.forEach(button => {
+    button.addEventListener('click', () => {
+      // Remove active class from all buttons
+      quantityBtns.forEach(btn => btn.classList.remove('active'));
+
+      // Add active class to the clicked button
+      button.classList.add('active');
+
+      // Update price
+      price.textContent = ₹${parseInt(button.dataset.price).toFixed(2)};
+
+      // Show extra content
+      extraContent.style.display = 'block';
+    });
+  });
+</script>
+
+</body>
+</html>
