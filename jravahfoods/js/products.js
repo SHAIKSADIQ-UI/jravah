@@ -690,7 +690,7 @@ const products = [
     "id": 57,
     "name": "spicy Boondi",
     "category": "Snacks",
-    "image": "images/Spicy boondi.png",
+    "image": "images/spicy boondi.png",
     "description": "Spicy boondi provides plant-based protein, healthy fats, and digestive support",
     "ingredients": "Besan, red chili flakes, roasted peanuts, curry leaves, and a touch of ginger.",
     "stock": "in",
